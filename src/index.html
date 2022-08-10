@@ -5,12 +5,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
-    <h1 class="text-3xl font-bold underline text-primary">
-        Hello world!
-    </h1>
+
+    <header class="hero-video relative overflow-hidden text-center  w-screen h-full bg-secondary text-white ">
+        <video autoplay muted loop id="myVideo" class="absolute top-0 left-0 object-cover w-full h-full  bg-opacity-5">
+            <source
+                src="https://demos.pixelgrade.com/listable/wp-content/uploads/sites/17/2015/10/listable-hero-video.mp4?_=1"
+                type="video/mp4">
+        </video>
+        <section class="p-1 relative bg-black h-full bg-opacity-60">
+            <!-- Navbar -->
+            <nav class="flex items-center lg:justify-between">
+                <img src="./images/hamburger.svg" alt="hamburger menu" class="lg:hidden">
+                <!-- Mobile Nav Links -->
+                <header class="w-full flex justify-center lg:justify-start  lg:w-full">
+                    <img class="h-8 lg:px-4" src="./images/Logo.svg" alt="LOGO">
+                </header>
+                <!-- Desktop Nav Links -->
+                <ul class="hidden lg:flex justify-evenly lg:w-4/5 font-light py-1 lg:justify-center">
+                    <li class="flex items-center py-1 px-6">
+                        Explore
+                        <img src="./images/down-arrow-light.png" alt="down" class=" mx-2 h-2 opacity-50">
+                    </li>
+                    <li class="flex items-center py-1 px-6">
+                        Help
+                        <img src="./images/down-arrow-light.png" alt="down" class="mx-2 h-2 opacity-50">
+                    </li>
+                    <li class="flex items-center py-1 px-6">Blog</li>
+                    <li class="flex items-center py-1 px-6">
+                        Log In
+                    </li>
+                    <li class="flex items-center ">
+                        <Button
+                            class="bg-white bg-opacity-10 py-1 px-6 rounded-md border-opacity-20 border-white border hover:border-opacity-95 transition-all flex items-center">Add
+                            Listing
+                            <img src="./images/down-arrow-light.png" alt="down" class="mx-2 h-2 -rotate-90">
+                        </Button>
+                    </li>
+                </ul>
+            </nav>
+            <main class="py-24 font-light lg:font-normal lg:pt-48">
+                <h1 class="text-2xl lg:text-5xl">
+                    Discover The City Gems
+                </h1>
+                <h5 class="font-light lg:text-lg">
+                    Find great places to stay, eat, shop, or visit from local experts.
+                </h5>
+                <span class="flex justify-center my-3 lg:my-9">
+                    <span class="mx-1 lg:mx-3 p-3 bg-white rounded-md flex items-center">
+                        <input class="w-80" type="text" placeholder="What are you looking for?">
+                        <img src="./images/down-arrow.png" alt="down" class="h-4">
+                    </span>
+                    <button class="mx-1 lg:mx-3 bg-primary hover:bg-secondary p-3 lg:px-5 rounded-md flex items-center">
+                        <img src="./images/search.svg" alt="search" class="">
+                        <h5 class="hidden lg:flex px-2">Search</h5>
+                    </button>
+                </span>
+            </main>
+            <footer class="py-9">
+                <ul class="flex justify-evenly lg:justify-center font-light items-center">
+                    <li
+                        class="flex flex-col items-center justify-end h-7 lg:mx-px lg:w-16 lg:bg-white lg:bg-opacity-10 lg:h-16 lg:py-12 lg:px-10 lg:justify-center lg:rounded-sm">
+                        <img src="./images/food.svg" alt="">
+                        Food
+                    </li>
+                    <li
+                        class="flex flex-col items-center justify-end h-7 lg:mx-px lg:w-16 lg:bg-white lg:bg-opacity-10 lg:h-16 lg:py-12 lg:px-10 lg:justify-center lg:rounded-sm">
+                        <img src="./images/play.svg" alt="">
+                        Play
+                    </li>
+                    <li
+                        class="flex flex-col items-center justify-end h-7 lg:mx-px lg:w-16 lg:bg-white lg:bg-opacity-10 lg:h-16 lg:py-12 lg:px-10 lg:justify-center lg:rounded-sm">
+                        <img src="./images/bakery.svg" alt="">
+                        Bakery
+                    </li>
+                    <li
+                        class="flex flex-col items-center justify-end h-7 lg:mx-px lg:w-16 lg:bg-white lg:bg-opacity-10 lg:h-16 lg:py-12 lg:px-10 lg:justify-center lg:rounded-sm">
+                        <img src="./images/park.svg" alt="">
+                        Park
+                    </li>
+                    <li
+                        class="flex flex-col items-center justify-end h-7 lg:mx-px lg:w-16 lg:bg-white lg:bg-opacity-10 lg:h-16 lg:py-12 lg:px-10 lg:justify-center lg:rounded-sm">
+                        <img src="./images/hotel.svg" alt="">
+                        Hotels
+                    </li>
+
+                    <li
+                        class="flex flex-col items-center justify-end h-7 lg:mx-px lg:w-16 lg:bg-white lg:bg-opacity-10 lg:h-16 lg:py-12 lg:px-10 lg:justify-center lg:rounded-sm">
+                        <img src="./images/hotel.svg" alt="">
+                        Hotels
+                    </li>
+
+                    <li
+                        class="hidden lg:flex flex-col items-center justify-end h-7 lg:mx-px lg:w-16 lg:bg-white lg:bg-opacity-10 lg:h-16 lg:py-12 lg:px-10 lg:justify-center lg:rounded-sm">
+                        <img src="./images/movie.svg" alt="">
+                        Movie
+                    </li>
+                    <li
+                        class=" hidden lg:flex flex-col items-center justify-end h-7 lg:mx-px lg:w-16 lg:bg-white lg:bg-opacity-10 lg:h-16 lg:py-12 lg:px-10 lg:justify-center lg:rounded-sm">
+                        <img src="./images/gallery.svg" alt="">
+                        Gallery
+                    </li>
+                </ul>
+            </footer>
+        </section>
+    </header>
 </body>
 
 </html>
