@@ -18,9 +18,45 @@
         </video>
         <section class="p-1 relative bg-black h-full bg-opacity-60">
             <!-- Navbar -->
-            <nav class="flex items-center lg:justify-between">
-                <img src="./images/hamburger.svg" alt="hamburger menu" class="lg:hidden">
+            <nav class="flex items-center  h-full w-full lg:justify-between">
                 <!-- Mobile Nav Links -->
+                <img onclick="showNavMenu()" src="./images/hamburger.svg" alt="hamburger menu" class="lg:hidden">
+                <ul id="hamburgerMenuList"
+                    class="top-0 absolute h-screen w-4/5 bg-white p-0 z-50 -left-full transition-all">
+                    <li class="text-black text-left border-b" onclick="hideNavMenu()">
+                        <img src="./images/cross.png" alt="cross" class=" z-50">
+                    </li>
+                    <li
+                        class="border-b px-4 h-12 font-light text-opacity-60  text-black text-left flex items-center justify-between">
+                        <span class="w-full">
+                            Explore
+                        </span>
+                        <span class="w-px h-full bg-black bg-opacity-10 mx-4">
+                        </span>
+                        <img src="./images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
+
+                    </li>
+                    <li
+                        class="border-b px-4 h-12 font-light text-opacity-60  text-black text-left flex items-center justify-between">
+                        <span class="w-full">
+                            Help
+                        </span>
+                        <span class="w-px h-full bg-black bg-opacity-10 mx-4">
+                        </span>
+                        <img src="./images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
+
+                    </li>
+                    <li class="border-b px-4 h-12 font-light text-opacity-60  text-black text-left flex items-center">
+                        Blog
+                    </li>
+                    <li class="border-b px-4 h-12 font-light text-opacity-60  text-black text-left flex items-center">
+                        Log In
+                    </li>
+                    <li class="border-b px-4 h-12 font-light text-opacity-60  text-black text-left flex items-center">
+                        Add Listing
+                    </li>
+                </ul>
+
                 <header class="w-full flex justify-center lg:justify-start  lg:w-full">
                     <img class="h-8 lg:px-4" src="./images/Logo.svg" alt="LOGO">
                 </header>
@@ -47,7 +83,7 @@
                     </li>
                 </ul>
             </nav>
-            <main class="py-24 font-light lg:font-normal lg:pt-48">
+            <main class="py-24 font-light lg:font-normal lg:pt-48 z-10">
                 <h1 class="text-2xl lg:text-5xl">
                     Discover The City Gems
                 </h1>
@@ -66,7 +102,7 @@
                         </span>
                         <ul class="absolute invisible w-full " id="searchList">
                             <li
-                                class="flex bg-white text-black items-center w-full p-3 lg:py-4  hover:text-white hover:bg-primary transition-all cursor-pointer">
+                                class="border-t border-b flex bg-white text-black items-center w-full p-3 lg:py-4  hover:text-white hover:bg-primary transition-all cursor-pointer">
                                 <img class=""
                                     src="https://demos.pixelgrade.com/listable/wp-content/uploads/sites/17/2015/11/menu-map.svg"
                                     alt="">
@@ -74,7 +110,7 @@
                                 <p class="text-black text-opacity-50 text-xs lg:text-sm font-light ">Region</p>
                             </li>
                             <li
-                                class="flex bg-white text-black items-center w-full p-3 lg:py-4  hover:text-white hover:bg-primary transition-all cursor-pointer">
+                                class="border-b flex bg-white text-black items-center w-full p-3 lg:py-4  hover:text-white hover:bg-primary transition-all cursor-pointer">
                                 <img class=""
                                     src="https://demos.pixelgrade.com/listable/wp-content/uploads/sites/17/2015/11/menu-map.svg"
                                     alt="">
@@ -82,7 +118,7 @@
                                 <p class="text-black text-opacity-50 text-xs lg:text-sm font-light ">Region</p>
                             </li>
                             <li
-                                class="flex bg-white text-black items-center w-full p-3 lg:py-4  hover:text-white hover:bg-primary transition-all cursor-pointer">
+                                class="border-b flex bg-white text-black items-center w-full p-3 lg:py-4  hover:text-white hover:bg-primary transition-all cursor-pointer">
                                 <img class=""
                                     src="https://demos.pixelgrade.com/listable/wp-content/uploads/sites/17/2015/11/menu-map.svg"
                                     alt="">
@@ -90,7 +126,7 @@
                                 <p class="text-black text-opacity-50 text-xs lg:text-sm font-light ">Region</p>
                             </li>
                             <li
-                                class="flex bg-white text-black items-center w-full p-3 lg:py-4  hover:text-white hover:bg-primary transition-all cursor-pointer">
+                                class="border-b flex bg-white text-black items-center w-full p-3 lg:py-4  hover:text-white hover:bg-primary transition-all cursor-pointer">
                                 <img class=""
                                     src="https://demos.pixelgrade.com/listable/wp-content/uploads/sites/17/2015/11/menu-top-picks.svg"
                                     alt="">
@@ -98,7 +134,7 @@
                                 <p class="text-black text-opacity-50 text-xs lg:text-sm font-light ">Featured List</p>
                             </li>
                             <li
-                                class="flex bg-white text-black items-center w-full p-3 lg:py-4  hover:text-white hover:bg-primary transition-all cursor-pointer">
+                                class="border-b flex bg-white text-black items-center w-full p-3 lg:py-4  hover:text-white hover:bg-primary transition-all cursor-pointer">
                                 <img class=""
                                     src="https://demos.pixelgrade.com/listable/wp-content/uploads/sites/17/2015/11/menu-shopping.svg"
                                     alt="">
@@ -106,7 +142,7 @@
                                 <p class="text-black text-opacity-50 text-xs lg:text-sm font-light ">Category</p>
                             </li>
                             <li
-                                class="flex bg-white text-black items-center w-full p-3 lg:py-4  hover:text-white hover:bg-primary transition-all cursor-pointer">
+                                class="border-b flex bg-white text-black items-center w-full p-3 lg:py-4  hover:text-white hover:bg-primary transition-all cursor-pointer">
                                 <img class=""
                                     src="	https://demos.pixelgrade.com/listable/wp-content/uploads/sites/17/2015/11/menu-food.svg"
                                     alt="">
@@ -122,7 +158,7 @@
                     </button>
                 </span>
             </main>
-            <footer class="py-9">
+            <footer class=" py-9  z-10">
                 <ul class="flex justify-evenly lg:justify-center font-light items-center">
                     <li
                         class="flex flex-col items-center justify-end h-7 lg:mx-px lg:w-20 lg:bg-white lg:bg-opacity-10 lg:h-20 lg:py-8 lg:px-2 lg:justify-evenly text-xs lg:rounded-sm font-light hover:bg-opacity-20 transition-all cursor-pointer">
