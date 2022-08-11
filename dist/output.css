@@ -603,14 +603,6 @@ html {
   z-index: 10;
 }
 
-.m-16 {
-  margin: 4rem;
-}
-
-.m-10 {
-  margin: 2.5rem;
-}
-
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -636,24 +628,9 @@ html {
   margin-bottom: 0.5rem;
 }
 
-.my-16 {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-}
-
-.my-8 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
-}
-
-.my-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 
 .flex {
@@ -704,20 +681,8 @@ html {
   height: 1.5rem;
 }
 
-.h-32 {
-  height: 8rem;
-}
-
 .h-52 {
   height: 13rem;
-}
-
-.h-20 {
-  height: 5rem;
-}
-
-.w-screen {
-  width: 100vw;
 }
 
 .w-full {
@@ -740,16 +705,8 @@ html {
   width: 15rem;
 }
 
-.w-32 {
-  width: 8rem;
-}
-
 .w-36 {
   width: 9rem;
-}
-
-.w-20 {
-  width: 5rem;
 }
 
 .-rotate-90 {
@@ -905,16 +862,12 @@ html {
   padding: 0.75rem;
 }
 
-.p-5 {
-  padding: 1.25rem;
-}
-
-.p-10 {
-  padding: 2.5rem;
-}
-
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
 }
 
 .px-4 {
@@ -960,21 +913,6 @@ html {
 .py-9 {
   padding-top: 2.25rem;
   padding-bottom: 2.25rem;
-}
-
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
 }
 
 .text-left {
@@ -1075,54 +1013,14 @@ html {
   display: flex;
 }
 
-.after\:h-2::after {
-  content: var(--tw-content);
-  height: 0.5rem;
-}
-
-.after\:h-5::after {
-  content: var(--tw-content);
-  height: 1.25rem;
-}
-
-.after\:h-8::after {
-  content: var(--tw-content);
-  height: 2rem;
-}
-
 .after\:h-6::after {
   content: var(--tw-content);
   height: 1.5rem;
 }
 
-.after\:h-7::after {
-  content: var(--tw-content);
-  height: 1.75rem;
-}
-
-.after\:w-2::after {
-  content: var(--tw-content);
-  width: 0.5rem;
-}
-
-.after\:w-5::after {
-  content: var(--tw-content);
-  width: 1.25rem;
-}
-
-.after\:w-8::after {
-  content: var(--tw-content);
-  width: 2rem;
-}
-
 .after\:w-6::after {
   content: var(--tw-content);
   width: 1.5rem;
-}
-
-.after\:w-7::after {
-  content: var(--tw-content);
-  width: 1.75rem;
 }
 
 .after\:items-center::after {
@@ -1133,11 +1031,6 @@ html {
 .after\:justify-center::after {
   content: var(--tw-content);
   justify-content: center;
-}
-
-.after\:rounded::after {
-  content: var(--tw-content);
-  border-radius: 0.25rem;
 }
 
 .after\:rounded-full::after {
@@ -1151,41 +1044,15 @@ html {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.after\:p-1::after {
-  content: var(--tw-content);
-  padding: 0.25rem;
-}
-
 .after\:p-0::after {
   content: var(--tw-content);
   padding: 0px;
-}
-
-.after\:px-1::after {
-  content: var(--tw-content);
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
 }
 
 .after\:text-black::after {
   content: var(--tw-content);
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-.after\:content-\[\]::after {
-  --tw-content: ;
-  content: var(--tw-content);
-}
-
-.after\:content-\[\'\'\]::after {
-  --tw-content: '';
-  content: var(--tw-content);
-}
-
-.after\:content-\[\'10\'\]::after {
-  --tw-content: '10';
-  content: var(--tw-content);
 }
 
 .after\:content-\[\'11\'\]::after {
@@ -1275,10 +1142,6 @@ html {
     display: flex;
   }
 
-  .lg\:grid {
-    display: grid;
-  }
-
   .lg\:hidden {
     display: none;
   }
@@ -1303,20 +1166,8 @@ html {
     width: 5rem;
   }
 
-  .lg\:w-52 {
-    width: 13rem;
-  }
-
-  .lg\:w-5 {
-    width: 1.25rem;
-  }
-
   .lg\:w-56 {
     width: 14rem;
-  }
-
-  .lg\:grid-cols-1 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
   .lg\:grid-cols-4 {
@@ -1350,6 +1201,10 @@ html {
 
   .lg\:bg-opacity-10 {
     --tw-bg-opacity: 0.1;
+  }
+
+  .lg\:p-10 {
+    padding: 2.5rem;
   }
 
   .lg\:px-4 {
@@ -1406,7 +1261,22 @@ html {
     line-height: 2.5rem;
   }
 
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
   .lg\:font-normal {
     font-weight: 400;
+  }
+
+  .lg\:after\:h-10::after {
+    content: var(--tw-content);
+    height: 2.5rem;
+  }
+
+  .lg\:after\:w-10::after {
+    content: var(--tw-content);
+    width: 2.5rem;
   }
 }
