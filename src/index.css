@@ -42,3 +42,14 @@ body {
 .invisible {
   display: none;
 }
+
+.help-dropdown:hover .help-dropdown-content {
+  display: block;
+}
+
+.explore-dropdown:hover .explore-dropdown-content {
+  display: block;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}

@@ -20,7 +20,8 @@
             <!-- Navbar -->
             <nav class="flex items-center  h-full w-full lg:justify-between">
                 <!-- Mobile Nav Links -->
-                <img onclick="showNavMenu()" src="./images/hamburger.svg" alt="hamburger menu" class="lg:hidden" id="hamburgerBtn">
+                <img onclick="showNavMenu()" src="./images/hamburger.svg" alt="hamburger menu" class="lg:hidden"
+                    id="hamburgerBtn">
                 <ul id="hamburgerMenuList"
                     class="top-0 absolute h-screen w-4/5 bg-white p-0 z-50 -left-full transition-all">
                     <li class="text-black text-left border-b" onclick="hideNavMenu()">
@@ -144,14 +145,177 @@
                     <img class="h-8 lg:px-4" src="./images/Logo.svg" alt="LOGO">
                 </header>
                 <!-- Desktop Nav Links -->
-                <ul class="hidden lg:flex justify-evenly lg:w-4/5 font-light py-1 lg:justify-center">
-                    <li class="flex items-center py-1 px-6">
+                <ul
+                    class="hidden lg:flex justify-around whitespace-nowrap px-3 font-light py-1 lg:justify-center cursor-pointer">
+                    <li class="flex items-center py-1 px-6 relative explore-dropdown ">
                         Explore
                         <img src="./images/down-arrow-light.png" alt="down" class=" mx-2 h-2 opacity-50">
+                        <ul
+                            class="hidden absolute top-full -left-1/4 text-start text-sm font-light  py-3 bg-white text-black z-50 explore-dropdown-content ">
+                            <li class="px-4 py-2 text-black text-opacity-50 w-40 transition-all   whitespace-nowrap">
+                                All List
+                            </li>
+                            <li
+                                class="flex justify-between px-4 py-2 text-black text-opacity-50 w-40 hover:text-primary hover:text-opacity-100 transition-all cursor-pointer  whitespace-nowrap dropdown">
+                                <span class="w-full">
+                                    Food
+                                </span>
+                                <img src="./images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75 -rotate-90">
+                                <ul
+                                    class="hidden absolute left-full text-start text-sm font-light  p-3 bg-white text-black z-50 dropdown-content shadow-md border-1">
+                                    <li
+                                        class="px-4 py-2 text-black text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                        Cafe
+                                    </li>
+                                    <li
+                                        class="px-4 py-2 text-black text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                        Pizza Place
+                                    </li>
+                                    <li
+                                        class="px-4 py-2 text-black text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                        Restaurant
+                                    </li>
+                                    <li
+                                        class="px-4 py-2 text-black text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                        Winery
+                                    </li>
+                                </ul>
+
+                            </li>
+                            <li
+                                class="flex justify-between px-4 py-2 text-black text-opacity-50 w-40 hover:text-primary hover:text-opacity-100 transition-all cursor-pointer  whitespace-nowrap dropdown">
+
+                                <span class="w-full">
+                                    Entertainment
+                                </span>
+                                <img src="./images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75 -rotate-90">
+
+                                <ul
+                                    class="hidden absolute left-full text-start text-sm font-light  p-3 bg-white text-black z-50 dropdown-content shadow-md border-1">
+                                    <li
+                                        class="px-4 py-2 text-black text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                        Art Gallery
+                                    </li>
+                                    <li
+                                        class="px-4 py-2 text-black text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                        Movie Theatre
+                                    </li>
+                                    <li
+                                        class="px-4 py-2 text-black text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                        Museum
+                                    </li>
+                                    <li
+                                        class="px-4 py-2 text-black text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                        Stadium
+                                    </li>
+                                </ul>
+                            </li>
+                            <li
+                                class="flex justify-between px-4 py-2 text-black text-opacity-50 w-40 hover:text-primary hover:text-opacity-100 transition-all cursor-pointer  whitespace-nowrap dropdown">
+
+                                <span class="w-full">
+                                    Lodging
+                                </span>
+                                <img src="./images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75 -rotate-90">
+
+                                <ul
+                                    class="hidden absolute left-full text-start text-sm font-light  p-3 bg-white text-black z-50 dropdown-content shadow-md border-1">
+                                    <li
+                                        class="px-4 py-2 text-black text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                        Hotel
+                                    </li>
+                                    <li
+                                        class="px-4 py-2 text-black text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                        Apartment
+                                    </li>
+                                </ul>
+                            </li>
+                            <li
+                                class="flex justify-between px-4 py-2 text-black text-opacity-50 w-40 hover:text-primary hover:text-opacity-100 transition-all cursor-pointer  whitespace-nowrap dropdown">
+
+                                <span class="w-full">
+                                    Nightlife
+                                </span>
+                                <img src="./images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75 -rotate-90">
+
+                                <ul
+                                    class="hidden absolute left-full text-start text-sm font-light  p-3 bg-white text-black z-50 dropdown-content shadow-md border-1">
+                                    <li
+                                        class="px-4 py-2 text-black text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                        Bar
+                                    </li>
+                                    <li
+                                        class="px-4 py-2 text-black text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                        Brewery
+                                    </li>
+                                    <li
+                                        class="px-4 py-2 text-black text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                        Lounge
+                                    </li>
+                                </ul>
+                            </li>
+                            <li
+                                class="flex justify-between px-4 py-2 text-black text-opacity-50 w-40 hover:text-primary hover:text-opacity-100 transition-all cursor-pointer  whitespace-nowrap dropdown">
+
+                                <span class="w-full">
+                                    Outdoors
+                                </span>
+                                <img src="./images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75 -rotate-90">
+
+                                <ul
+                                    class="hidden absolute left-full text-start text-sm font-light  p-3 bg-white text-black z-50 dropdown-content shadow-md border-1">
+                                    <li
+                                        class="px-4 py-2 text-black text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                        Park
+                                    </li>
+                                    <li
+                                        class="px-4 py-2 text-black text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                        Bridge
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li
+                                class="flex justify-between px-4 py-2 text-black text-opacity-50 w-40 hover:text-primary hover:text-opacity-100 transition-all cursor-pointer  whitespace-nowrap dropdown">
+
+                                <span class="w-full">
+                                    Shops
+                                </span>
+                                <img src="./images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75 -rotate-90">
+
+                                <ul
+                                    class="hidden absolute left-full text-start text-sm font-light  p-3 bg-white text-black z-50 dropdown-content shadow-md border-1">
+                                    <li
+                                        class="px-4 py-2 text-black text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                        Bank
+                                    </li>
+                                    <li
+                                        class="px-4 py-2 text-black text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                        Furniture/Home
+                                    </li>
+
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
-                    <li class="flex items-center py-1 px-6">
+                    <li class="flex items-center py-3 px-6 relative help-dropdown">
                         Help
                         <img src="./images/down-arrow-light.png" alt="down" class="mx-2 h-2 opacity-50">
+                        <ul
+                            class="hidden absolute top-full -left-2/4 text-start text-sm font-light  p-3 bg-white text-black z-50 help-dropdown-content ">
+                            <li
+                                class="px-4 py-2 text-black text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                How It Works</li>
+                            <li
+                                class="px-4 py-2 text-black text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                Special Offers</li>
+                            <li
+                                class="px-4 py-2 text-black text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                Listing(No Map)</li>
+                            <li
+                                class="px-4 py-2 text-black text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                Advanced Filters(Demo)</li>
+                        </ul>
                     </li>
                     <li class="flex items-center py-1 px-6">Blog</li>
                     <li class="flex items-center py-1 px-6">
