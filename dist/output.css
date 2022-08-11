@@ -847,11 +847,6 @@ html {
   background-color: rgb(255 77 85 / var(--tw-bg-opacity));
 }
 
-.bg-zinc-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(39 39 42 / var(--tw-bg-opacity));
-}
-
 .bg-secondary-darker {
   --tw-bg-opacity: 1;
   background-color: rgb(47 41 41 / var(--tw-bg-opacity));
@@ -905,10 +900,6 @@ html {
 
 .p-10 {
   padding: 2.5rem;
-}
-
-.p-7 {
-  padding: 1.75rem;
 }
 
 .p-6 {

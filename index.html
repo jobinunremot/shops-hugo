@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./dist/output.css" rel="stylesheet">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./src/index.css">
 </head>
 
 <body>
@@ -22,12 +22,12 @@
             <!-- Navbar -->
             <nav class="flex items-center  h-full w-full lg:justify-between">
                 <!-- Mobile Nav Links -->
-                <img onclick="showNavMenu()" src="./images/hamburger.svg" alt="hamburger menu" class="lg:hidden"
+                <img onclick="showNavMenu()" src="./src/images/hamburger.svg" alt="hamburger menu" class="lg:hidden"
                     id="hamburgerBtn">
                 <ul id="hamburgerMenuList"
                     class="top-0 absolute h-screen w-4/5 bg-white p-0 z-50 -left-full transition-all">
                     <li class="text-black text-left border-b" onclick="hideNavMenu()">
-                        <img src="./images/cross.png" alt="cross" class=" z-50">
+                        <img src="./src/images/cross.png" alt="cross" class=" z-50">
                     </li>
                     <li onclick="showExploreList()"
                         class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-black text-left flex items-center justify-between">
@@ -36,7 +36,7 @@
                         </span>
                         <span class="w-px h-full bg-black bg-opacity-10 mx-4">
                         </span>
-                        <img src="./images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
+                        <img src="./src/images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
                     </li>
 
                     <!-- Additional Explore List Start -->
@@ -48,7 +48,7 @@
                             </span>
                             <span class="w-px h-full bg-black bg-opacity-10 mx-4">
                             </span>
-                            <img src="./images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
+                            <img src="./src/images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
                         </li>
                         <li
                             class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-black text-left flex items-center justify-between">
@@ -57,7 +57,7 @@
                             </span>
                             <span class="w-px h-full bg-black bg-opacity-10 mx-4">
                             </span>
-                            <img src="./images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
+                            <img src="./src/images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
                         </li>
                         <li
                             class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-black text-left flex items-center justify-between">
@@ -66,7 +66,7 @@
                             </span>
                             <span class="w-px h-full bg-black bg-opacity-10 mx-4">
                             </span>
-                            <img src="./images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
+                            <img src="./src/images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
                         </li>
                         <li
                             class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-black text-left flex items-center justify-between">
@@ -75,7 +75,7 @@
                             </span>
                             <span class="w-px h-full bg-black bg-opacity-10 mx-4">
                             </span>
-                            <img src="./images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
+                            <img src="./src/images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
                         </li>
                         <li
                             class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-black text-left flex items-center justify-between">
@@ -84,7 +84,7 @@
                             </span>
                             <span class="w-px h-full bg-black bg-opacity-10 mx-4">
                             </span>
-                            <img src="./images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
+                            <img src="./src/images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
                         </li>
                         <li
                             class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-black text-left flex items-center justify-between">
@@ -93,7 +93,7 @@
                             </span>
                             <span class="w-px h-full bg-black bg-opacity-10 mx-4">
                             </span>
-                            <img src="./images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
+                            <img src="./src/images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
                         </li>
                     </ul>
                     <!-- Additional Explore List End ^-->
@@ -105,7 +105,7 @@
                         </span>
                         <span class="w-px h-full bg-black bg-opacity-10 mx-4">
                         </span>
-                        <img src="./images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
+                        <img src="./src/images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
                     </li>
 
                     <!-- Additional Help List Start -->
@@ -144,14 +144,14 @@
                 </ul>
 
                 <header class="w-full flex justify-center lg:justify-start  lg:w-full">
-                    <img class="h-8 lg:px-4" src="./images/Logo.svg" alt="LOGO">
+                    <img class="h-8 lg:px-4" src="./src/images/Logo.svg" alt="LOGO">
                 </header>
                 <!-- Desktop Nav Links -->
                 <ul
                     class="hidden lg:flex justify-around whitespace-nowrap px-3 font-light py-1 lg:justify-center cursor-pointer">
                     <li class="flex items-center py-1 px-6 relative explore-dropdown ">
                         Explore
-                        <img src="./images/down-arrow-light.png" alt="down" class=" mx-2 h-2 opacity-50">
+                        <img src="./src/images/down-arrow-light.png" alt="down" class=" mx-2 h-2 opacity-50">
                         <ul
                             class="hidden absolute top-full -left-1/4 text-start text-sm font-light  py-3 bg-white text-black z-50 explore-dropdown-content ">
                             <li class="px-4 py-2 text-black text-opacity-50 w-40 transition-all   whitespace-nowrap">
@@ -162,7 +162,8 @@
                                 <span class="w-full">
                                     Food
                                 </span>
-                                <img src="./images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75 -rotate-90">
+                                <img src="./src/images/down-arrow.png" alt="down-arrow"
+                                    class="h-3 opacity-75 -rotate-90">
                                 <ul
                                     class="hidden absolute left-full text-start text-sm font-light  p-3 bg-white text-black z-50 dropdown-content shadow-md border-1">
                                     <li
@@ -190,7 +191,8 @@
                                 <span class="w-full">
                                     Entertainment
                                 </span>
-                                <img src="./images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75 -rotate-90">
+                                <img src="./src/images/down-arrow.png" alt="down-arrow"
+                                    class="h-3 opacity-75 -rotate-90">
 
                                 <ul
                                     class="hidden absolute left-full text-start text-sm font-light  p-3 bg-white text-black z-50 dropdown-content shadow-md border-1">
@@ -218,7 +220,8 @@
                                 <span class="w-full">
                                     Lodging
                                 </span>
-                                <img src="./images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75 -rotate-90">
+                                <img src="./src/images/down-arrow.png" alt="down-arrow"
+                                    class="h-3 opacity-75 -rotate-90">
 
                                 <ul
                                     class="hidden absolute left-full text-start text-sm font-light  p-3 bg-white text-black z-50 dropdown-content shadow-md border-1">
@@ -238,7 +241,8 @@
                                 <span class="w-full">
                                     Nightlife
                                 </span>
-                                <img src="./images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75 -rotate-90">
+                                <img src="./src/images/down-arrow.png" alt="down-arrow"
+                                    class="h-3 opacity-75 -rotate-90">
 
                                 <ul
                                     class="hidden absolute left-full text-start text-sm font-light  p-3 bg-white text-black z-50 dropdown-content shadow-md border-1">
@@ -262,7 +266,8 @@
                                 <span class="w-full">
                                     Outdoors
                                 </span>
-                                <img src="./images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75 -rotate-90">
+                                <img src="./src/images/down-arrow.png" alt="down-arrow"
+                                    class="h-3 opacity-75 -rotate-90">
 
                                 <ul
                                     class="hidden absolute left-full text-start text-sm font-light  p-3 bg-white text-black z-50 dropdown-content shadow-md border-1">
@@ -283,7 +288,8 @@
                                 <span class="w-full">
                                     Shops
                                 </span>
-                                <img src="./images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75 -rotate-90">
+                                <img src="./src/images/down-arrow.png" alt="down-arrow"
+                                    class="h-3 opacity-75 -rotate-90">
 
                                 <ul
                                     class="hidden absolute left-full text-start text-sm font-light  p-3 bg-white text-black z-50 dropdown-content shadow-md border-1">
@@ -302,7 +308,7 @@
                     </li>
                     <li class="flex items-center py-3 px-6 relative help-dropdown">
                         Help
-                        <img src="./images/down-arrow-light.png" alt="down" class="mx-2 h-2 opacity-50">
+                        <img src="./src/images/down-arrow-light.png" alt="down" class="mx-2 h-2 opacity-50">
                         <ul
                             class="hidden absolute top-full -left-2/4 text-start text-sm font-light  p-3 bg-white text-black z-50 help-dropdown-content ">
                             <li
@@ -327,7 +333,7 @@
                         <Button
                             class="bg-white bg-opacity-10 py-1 px-6 rounded-md border-opacity-20 border-white border hover:border-opacity-95 transition-all flex items-center">Add
                             Listing
-                            <img src="./images/down-arrow-light.png" alt="down" class="mx-2 h-2 -rotate-90">
+                            <img src="./src/images/down-arrow-light.png" alt="down" class="mx-2 h-2 -rotate-90">
                         </Button>
                     </li>
                 </ul>
@@ -347,7 +353,7 @@
                             <input id="searchInputField" class="w-full outline-none text-black text-opacity-50"
                                 type="text" placeholder="What are you looking for?" onFocus="showSearchList()"
                                 onblur="hideSearchList()">
-                            <img src="./images/down-arrow.png" alt="down" class="h-4">
+                            <img src="./src/images/down-arrow.png" alt="down" class="h-4">
                         </span>
                         <ul class="absolute invisible w-full " id="searchList">
                             <li
@@ -402,7 +408,7 @@
                     </span>
                     <button
                         class="mx-1 lg:mx-3 bg-primary hover:bg-secondary transition-all p-3 lg:px-5 rounded-md flex items-center">
-                        <img src="./images/search.svg" alt="search" class="">
+                        <img src="./src/images/search.svg" alt="search" class="">
                         <h5 class="hidden lg:flex px-2">Search</h5>
                     </button>
                 </span>
@@ -411,31 +417,31 @@
                 <ul class="flex justify-evenly lg:justify-center font-light items-center">
                     <li
                         class="flex flex-col items-center justify-end h-7 lg:mx-px lg:w-20 lg:bg-white lg:bg-opacity-10 lg:h-20 lg:py-8 lg:px-2 lg:justify-evenly text-xs lg:rounded-sm font-light hover:bg-opacity-20 transition-all cursor-pointer">
-                        <img class="h-6 my-2" src="./images/food.svg" alt="">
+                        <img class="h-6 my-2" src="./src/images/food.svg" alt="">
                         <span>
                             Food</span>
                     </li>
                     <li
                         class="flex flex-col items-center justify-end h-7 lg:mx-px lg:w-20 lg:bg-white lg:bg-opacity-10 lg:h-20 lg:py-8 lg:px-2 lg:justify-evenly text-xs lg:rounded-sm font-light hover:bg-opacity-20 transition-all cursor-pointer">
-                        <img class="h-6 my-2" src="./images/play.svg" alt="">
+                        <img class="h-6 my-2" src="./src/images/play.svg" alt="">
                         <span>
                             Play</span>
                     </li>
                     <li
                         class="flex flex-col items-center justify-end h-7 lg:mx-px lg:w-20 lg:bg-white lg:bg-opacity-10 lg:h-20 lg:py-8 lg:px-2 lg:justify-evenly text-xs lg:rounded-sm font-light hover:bg-opacity-20 transition-all cursor-pointer">
-                        <img class="h-6 my-2" src="./images/bakery.svg" alt="">
+                        <img class="h-6 my-2" src="./src/images/bakery.svg" alt="">
                         <span>
                             Bakery</span>
                     </li>
                     <li
                         class="flex flex-col items-center justify-end h-7 lg:mx-px lg:w-20 lg:bg-white lg:bg-opacity-10 lg:h-20 lg:py-8 lg:px-2 lg:justify-evenly text-xs lg:rounded-sm font-light hover:bg-opacity-20 transition-all cursor-pointer">
-                        <img class="h-6 my-2" src="./images/park.svg" alt="">
+                        <img class="h-6 my-2" src="./src/images/park.svg" alt="">
                         <span>
                             Park</span>
                     </li>
                     <li
                         class="flex flex-col items-center justify-end h-7 lg:mx-px lg:w-20 lg:bg-white lg:bg-opacity-10 lg:h-20 lg:py-8 lg:px-2 lg:justify-evenly text-xs lg:rounded-sm font-light hover:bg-opacity-20 transition-all cursor-pointer">
-                        <img class="h-6 my-2" src="./images/hotel.svg" alt="">
+                        <img class="h-6 my-2" src="./src/images/hotel.svg" alt="">
                         <span>
                             Hotels</span>
                     </li>
@@ -443,14 +449,14 @@
 
                     <li
                         class="hidden lg:flex flex-col items-center justify-end h-7 lg:mx-px lg:w-20 lg:bg-white lg:bg-opacity-10 lg:h-20 lg:py-8 lg:px-6 lg:justify-evenly text-sm lg:rounded-sm font-light hover:bg-opacity-20 transition-all cursor-pointer">
-                        <img class="h-6 my-2" src="./images/movie.svg" alt="">
+                        <img class="h-6 my-2" src="./src/images/movie.svg" alt="">
                         <span>
                             Movie
                         </span>
                     </li>
                     <li
                         class="relative hidden lg:flex flex-col items-center justify-end h-7 lg:mx-px lg:w-20 lg:bg-white lg:bg-opacity-10 lg:h-20 lg:py-8 lg:px-2 lg:justify-evenly text-xs lg:rounded-sm font-light hover:bg-opacity-20 transition-all cursor-pointer">
-                        <img class="h-6 my-2" src="./images/gallery.svg" alt="">
+                        <img class="h-6 my-2" src="./src/images/gallery.svg" alt="">
                         <span>
                             Gallery
                         </span>
@@ -489,7 +495,7 @@
                             class="absolute bg-black w-full h-full bg-opacity-50 flex flex-col justify-center items-center text-white rounded-sm">
                             <span
                                 class="border-2 border-white  rounded-full p-5 my-3 lg:p-10 relative after:absolute after:top-0 after:right-0 after:bg-white after:rounded-full after:text-black after:h-6 after:w-6 lg:after:h-10 lg:after:w-10 after:p-0 after:flex after:justify-center after:items-center after:content-['11']">
-                                <img src="./images/stay.svg" alt="stay" class="lg:w-20">
+                                <img src="./src/images/stay.svg" alt="stay" class="lg:w-20">
                             </span>
                             <p class="py-3 lg:text-2xl">Stay</p>
                         </span>
@@ -501,7 +507,7 @@
                             class="absolute bg-black w-full h-full bg-opacity-50 flex flex-col justify-center items-center text-white rounded-sm">
                             <span
                                 class="border-2 border-white  rounded-full p-5 my-3 lg:p-10  relative after:absolute after:top-0 after:right-0 after:bg-white after:rounded-full after:text-black after:h-6 after:w-6 lg:after:h-10 lg:after:w-10 after:p-0 after:flex after:justify-center after:items-center  after:content-['33']">
-                                <img src="./images/eat&drink.svg" alt="stay" class="lg:w-20">
+                                <img src="./src/images/eat&drink.svg" alt="stay" class="lg:w-20">
                             </span>
                             <p class="py-3 lg:text-2xl">Eat & Drink</p>
                         </span>
@@ -513,7 +519,7 @@
                             class="absolute bg-black w-full h-full bg-opacity-50 flex flex-col justify-center items-center text-white rounded-sm">
                             <span
                                 class="border-2 border-white  rounded-full p-5 my-3 lg:p-10  relative after:absolute after:top-0 after:right-0 after:bg-white after:rounded-full after:text-black after:h-6 after:w-6 lg:after:h-10 lg:after:w-10 after:p-0 after:flex after:justify-center after:items-center after:content-['7']">
-                                <img src="./images/visit.svg" alt="stay" class="lg:w-20">
+                                <img src="./src/images/visit.svg" alt="stay" class="lg:w-20">
                             </span>
                             <p class="py-3 lg:text-2xl">Visit</p>
                         </span>
@@ -525,7 +531,7 @@
                             class="absolute bg-black w-full h-full bg-opacity-50 flex flex-col justify-center items-center text-white rounded-sm">
                             <span
                                 class="border-2 border-white  rounded-full p-5 my-3 lg:p-10  relative after:absolute after:top-0 after:right-0 after:bg-white after:rounded-full after:text-black after:h-6 after:w-6 lg:after:h-10 lg:after:w-10 after:p-0 after:flex after:justify-center after:items-center after:content-['13']">
-                                <img src="./images/shop.svg" alt="stay" class="lg:w-20">
+                                <img src="./src/images/shop.svg" alt="stay" class="lg:w-20">
                             </span>
                             <p class="py-3 lg:text-2xl">Shop</p>
                         </span>
@@ -660,7 +666,7 @@
                             class="absolute bg-black w-full h-full bg-opacity-50 flex flex-col justify-center items-center text-white rounded-sm">
                             <span
                                 class="border-2 border-white  rounded-full p-5 my-3 lg:p-10 relative after:absolute after:top-0 after:right-0 after:bg-white after:rounded-full after:text-black after:h-6 after:w-6 lg:after:h-10 lg:after:w-10 after:p-0 after:flex after:justify-center after:items-center after:content-['5']">
-                                <img src="./images/stay.svg" alt="stay" class="lg:w-20">
+                                <img src="./src/images/stay.svg" alt="stay" class="lg:w-20">
                             </span>
                             <p class="py-3 lg:text-2xl px-1 text-center">What To Do</p>
                         </span>
@@ -672,7 +678,7 @@
                             class="absolute bg-black w-full h-full bg-opacity-50 flex flex-col justify-center items-center text-white rounded-sm">
                             <span
                                 class="border-2 border-white  rounded-full p-5 my-3 lg:p-10 relative after:absolute after:top-0 after:right-0 after:bg-white after:rounded-full after:text-black after:h-6 after:w-6 lg:after:h-10 lg:after:w-10 after:p-0 after:flex after:justify-center after:items-center after:content-['7']">
-                                <img src="./images/stay.svg" alt="stay" class="lg:w-20">
+                                <img src="./src/images/stay.svg" alt="stay" class="lg:w-20">
                             </span>
                             <p class="py-3 lg:text-2xl px-1 text-center">What You Want</p>
                         </span>
@@ -684,7 +690,7 @@
                             class="absolute bg-black w-full h-full bg-opacity-50 flex flex-col justify-center items-center text-white rounded-sm">
                             <span
                                 class="border-2 border-white  rounded-full p-5 my-3 lg:p-10 relative after:absolute after:top-0 after:right-0 after:bg-white after:rounded-full after:text-black after:h-6 after:w-6 lg:after:h-10 lg:after:w-10 after:p-0 after:flex after:justify-center after:items-center after:content-['12']">
-                                <img src="./images/stay.svg" alt="stay" class="lg:w-20">
+                                <img src="./src/images/stay.svg" alt="stay" class="lg:w-20">
                             </span>
                             <p class="py-3 lg:text-2xl px-1 text-center"> Amazing Places</p>
                         </span>
@@ -696,7 +702,7 @@
                             class="absolute bg-black w-full h-full bg-opacity-50 flex flex-col justify-center items-center text-white rounded-sm">
                             <span
                                 class="border-2 border-white  rounded-full p-5 my-3 lg:p-10 relative after:absolute after:top-0 after:right-0 after:bg-white after:rounded-full after:text-black after:h-6 after:w-6 lg:after:h-10 lg:after:w-10 after:p-0 after:flex after:justify-center after:items-center after:content-['21']">
-                                <img src="./images/stay.svg" alt="stay" class="lg:w-20">
+                                <img src="./src/images/stay.svg" alt="stay" class="lg:w-20">
                             </span>
                             <p class="py-3 lg:text-2xl px-1 text-center">Explore Options</p>
                         </span>
@@ -767,7 +773,7 @@
                     <span
                         class="w-full text-center text-black  text-opacity-75 hover:text-primary hover:text-opacity-100 transition-all px-1">View
                         All</span>
-                    <img src="./images/down-arrow.png" alt="down-arrow" class="opacity-75 -rotate-90 h-3 w-3">
+                    <img src="./src/images/down-arrow.png" alt="down-arrow" class="opacity-75 -rotate-90 h-3 w-3">
                 </button>
             </footer>
         </section>
@@ -776,17 +782,17 @@
     <!-- Footer Section of Page -->
     <footer class="bg-secondary-darker">
         <section class="flex justify-center p-6">
-            <img src="./images/facebook.svg" alt="facebook"
+            <img src="./src/images/facebook.svg" alt="facebook"
                 class="p-1 border-2 border-white rounded-full mx-1 hover:opacity-50 transition-all cursor-pointer">
-            <img src="./images/youtube.svg" alt="youtube"
+            <img src="./src/images/youtube.svg" alt="youtube"
                 class="p-1 border-2 border-white rounded-full mx-1 hover:opacity-50 transition-all cursor-pointer">
-            <img src="./images/twitter.svg" alt="twitter"
+            <img src="./src/images/twitter.svg" alt="twitter"
                 class="p-1 border-2 border-white rounded-full mx-1 hover:opacity-50 transition-all cursor-pointer">
-            <img src="./images/pinterest.svg" alt="pinterest"
+            <img src="./src/images/pinterest.svg" alt="pinterest"
                 class="p-1 border-2 border-white rounded-full mx-1 hover:opacity-50 transition-all cursor-pointer">
-            <img src="./images/vkontake.svg" alt="vkontatke"
+            <img src="./src/images/vkontake.svg" alt="vkontatke"
                 class="p-1 border-2 border-white rounded-full mx-1 hover:opacity-50 transition-all cursor-pointer">
-            <img src="./images/instagram.svg" alt="instagram"
+            <img src="./src/images/instagram.svg" alt="instagram"
                 class="p-1 border-2 border-white rounded-full mx-1 hover:opacity-50 transition-all cursor-pointer">
         </section>
         <section class="text-center bg-secondary-darkest text-white text-opacity-60 text-sm font-thin p-10 ">
@@ -794,7 +800,7 @@
         </section>
     </footer>
 
-    <script src="./js/index.js"></script>
+    <script src="./src/js/index.js"></script>
 </body>
 
 </html>
