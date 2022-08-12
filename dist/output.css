@@ -678,6 +678,10 @@ html {
   margin-right: 0.75rem;
 }
 
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
 .flex {
   display: flex;
 }
@@ -1430,6 +1434,16 @@ html {
   .lg\:mx-5 {
     margin-left: 1.25rem;
     margin-right: 1.25rem;
+  }
+
+  .lg\:my-3 {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .lg\:my-5 {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
   }
 
   .lg\:block {
