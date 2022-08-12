@@ -61,10 +61,12 @@ const navSearchInput = document.getElementById("navSearchInput");
 
 function showNavSearchInput() {
     navSearchInput.classList.remove("invisible");
-    // searchInputContainer.classList.add("rounded-b-none");
+    navSearchInput.classList.remove("-top-full");
+    navSearchInput.classList.add("top-0");
 }
 
 function hideNavSearchInput() {
     navSearchInput.classList.add("invisible");
-    // searchInputContainer.classList.remove("rounded-b-none");
+    navSearchInput.classList.add("-top-full");
+    navSearchInput.classList.remove("top-0");
 }

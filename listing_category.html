@@ -18,7 +18,7 @@
                 <img onclick="showNavMenu()" src="./src/images/hamburger-dark.svg" alt="hamburger menu"
                     class="lg:hidden px-4 py-1" id="hamburgerBtn">
                 <ul id="hamburgerMenuList"
-                    class="top-0 fixed h-screen w-4/5 bg-white p-0 z-50 border-r border-black shadow-md -left-full transition-all">
+                    class="top-0 fixed h-screen w-4/5 bg-white p-0 z-50 border-r border-gray-200 shadow-md -left-full transition-all">
                     <li class="text-black text-left border-b" onclick="hideNavMenu()">
                         <img src="./src/images/cross.png" alt="cross" class=" z-50">
                     </li>
@@ -136,16 +136,70 @@
                     </li>
                 </ul>
                 <span style="border-top: 0; border-bottom:0;"
-                    class="h-full flex items-center w-full justify-center border  border-black p-2  ">
+                    class="h-full flex items-center w-full justify-center border  border-gray-200 p-2  ">
                     <img class="h-8 lg:px-4 px-2" src="./src/images/Logo-dark.svg" alt="Logo">
                 </span>
-                <img class="h-8 px-4 py-1 relative z-30" onclick="showNavSearchInput()"
+                <img class="h-8 px-4 py-1 relative z-50" onclick="showNavSearchInput()"
                     src="./src/images/search-dark.svg" alt="search">
                 <div id="navSearchInput"
-                    class="invisible transition-all top absolute flex justify-between top-0 w-full h-full">
-                    <input type="text" class="w-full border-black h-full px-4" placeholder="What Are You Looking For">
-                    <img class="w-1/5 z-50 bg-white  border border-white" style="border-left-color: #E5E7EB;"
-                        src="./src/images/cross.png" onclick="hideNavSearchInput()" alt="cross">
+                    class=" absolute flex flex-col w-full -top-full invisible transition-all  h-full">
+                    <span class="flex justify-between ">
+                        <input type="text" class="w-full border-gray-200 h-full px-4"
+                            placeholder="What Are You Looking For">
+                        <img class="w-1/5 z-50 bg-white  border border-white" style="border-left-color: #E5E7EB;"
+                            src="./src/images/cross.png" onclick="hideNavSearchInput()" alt="cross">
+                    </span>
+                    <ul class="w-full flex-1  " id="searchList">
+                        <li
+                            class="border-t border-b flex bg-white text-black items-center w-full p-3 lg:py-4  hover:text-white hover:bg-primary transition-all cursor-pointer">
+                            <img class=""
+                                src="https://demos.pixelgrade.com/listable/wp-content/uploads/sites/17/2015/11/menu-map.svg"
+                                alt="">
+                            <h5 class="font-light text-xs lg:text-sm px-2">City Of London</h5>
+                            <p class="text-black text-opacity-50 text-xs lg:text-sm font-light ">Region</p>
+                        </li>
+                        <li
+                            class="border-b flex bg-white text-black items-center w-full p-3 lg:py-4  hover:text-white hover:bg-primary transition-all cursor-pointer">
+                            <img class=""
+                                src="https://demos.pixelgrade.com/listable/wp-content/uploads/sites/17/2015/11/menu-map.svg"
+                                alt="">
+                            <h5 class="font-light text-xs lg:text-sm px-2">City of Westminster</h5>
+                            <p class="text-black text-opacity-50 text-xs lg:text-sm font-light ">Region</p>
+                        </li>
+                        <li
+                            class="border-b flex bg-white text-black items-center w-full p-3 lg:py-4  hover:text-white hover:bg-primary transition-all cursor-pointer">
+                            <img class=""
+                                src="https://demos.pixelgrade.com/listable/wp-content/uploads/sites/17/2015/11/menu-map.svg"
+                                alt="">
+                            <h5 class="font-light text-xs lg:text-sm px-2">Chelsea District</h5>
+                            <p class="text-black text-opacity-50 text-xs lg:text-sm font-light ">Region</p>
+                        </li>
+                        <li
+                            class="border-b flex bg-white text-black items-center w-full p-3 lg:py-4  hover:text-white hover:bg-primary transition-all cursor-pointer">
+                            <img class=""
+                                src="https://demos.pixelgrade.com/listable/wp-content/uploads/sites/17/2015/11/menu-top-picks.svg"
+                                alt="">
+                            <h5 class="font-light text-xs lg:text-sm px-2">Top Picks</h5>
+                            <p class="text-black text-opacity-50 text-xs lg:text-sm font-light ">Featured List</p>
+                        </li>
+                        <li
+                            class="border-b flex bg-white text-black items-center w-full p-3 lg:py-4  hover:text-white hover:bg-primary transition-all cursor-pointer">
+                            <img class=""
+                                src="https://demos.pixelgrade.com/listable/wp-content/uploads/sites/17/2015/11/menu-shopping.svg"
+                                alt="">
+                            <h5 class="font-light text-xs lg:text-sm px-2">Shopping</h5>
+                            <p class="text-black text-opacity-50 text-xs lg:text-sm font-light ">Category</p>
+                        </li>
+                        <li
+                            class="border-b flex bg-white text-black items-center w-full p-3 lg:py-4  hover:text-white hover:bg-primary transition-all cursor-pointer">
+                            <img class=""
+                                src="	https://demos.pixelgrade.com/listable/wp-content/uploads/sites/17/2015/11/menu-food.svg"
+                                alt="">
+                            <h5 class="font-light text-xs lg:text-sm px-2">Local Food</h5>
+                            <p class="text-black text-opacity-50 text-xs lg:text-sm font-light ">Category</p>
+                        </li>
+                    </ul>
+
                 </div>
             </nav>
         </section>
