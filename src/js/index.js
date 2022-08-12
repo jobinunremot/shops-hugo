@@ -85,7 +85,6 @@ function hideSearchList2() {
 
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
-
 let isFilteredFieldActivated = false;
 
 function activateFilterField() {
@@ -122,12 +121,12 @@ let shownFilteredForm = false;
 function showFilterForm() {
     const filterForm = document.getElementById("filterForm");
     if (shownFilteredForm === true) {
-        filterForm.classList.remove("hidden");
-        filterForm.classList.add("flex");
-        shownFilteredForm = false;
-    } else {
         filterForm.classList.add("hidden");
         filterForm.classList.remove("flex");
+        shownFilteredForm = false;
+    } else {
+        filterForm.classList.remove("hidden");
+        filterForm.classList.add("flex");
         shownFilteredForm = true;
     }
 }
