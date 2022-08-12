@@ -56,7 +56,6 @@ document.onclick = function (e) {
 
 
 // Navbar Open Search
-
 const navSearchInput = document.getElementById("navSearchInput");
 
 function showNavSearchInput() {
@@ -70,3 +69,82 @@ function hideNavSearchInput() {
     navSearchInput.classList.add("-top-full");
     navSearchInput.classList.remove("top-0");
 }
+
+// Search Input List Functionality Second Page
+const searchList2 = document.getElementById("searchList2");
+const searchInputContainer2 = document.getElementById("searchInputContainer2");
+
+
+function showSearchList2() {
+    searchList2.classList.remove("invisible");
+}
+
+function hideSearchList2() {
+    searchList2.classList.add("invisible");
+}
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+
+let isFilteredFieldActivated = false;
+
+function activateFilterField() {
+    if (isFilteredFieldActivated == true) {
+        document.querySelectorAll('.filter-options').forEach(el => el.classList.remove('show'));
+        document.querySelectorAll('.filter-options').forEach(el => el.classList.add('hide'));
+        isFilteredFieldActivated = false;
+    } else {
+        document.querySelectorAll('.filter-options').forEach(el => el.classList.add('show'));
+        document.querySelectorAll('.filter-options').forEach(el => el.classList.remove('hide'));
+        isFilteredFieldActivated = true;
+    }
+}
+
+function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+        txtValue = a[i].textContent || a[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
+        }
+    }
+}
+
+// Show Filtered Form
+let shownFilteredForm = false;
+
+function showFilterForm() {
+    const filterForm = document.getElementById("filterForm");
+    if (shownFilteredForm === true) {
+        filterForm.classList.remove("hidden");
+        filterForm.classList.add("flex");
+        shownFilteredForm = false;
+    } else {
+        filterForm.classList.add("hidden");
+        filterForm.classList.remove("flex");
+        shownFilteredForm = true;
+    }
+}
+
+// Show Map on Mobile Screen 2nd Page
+function showMap() {
+    const categoryGalleryContent = document.getElementById("categoryGalleryContent");
+    const categoryMapContent = document.getElementById("categoryMapContent");
+    categoryGalleryContent.classList.add("hidden");
+    categoryMapContent.classList.remove("hidden");
+}
+function hideMap() {
+    const categoryGalleryContent = document.getElementById("categoryGalleryContent");
+    const categoryMapContent = document.getElementById("categoryMapContent");
+    categoryGalleryContent.classList.remove("hidden");
+    categoryMapContent.classList.add("hidden");
+}
+
+
+
