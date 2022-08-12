@@ -1,0 +1,158 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/index.css">
+    <link rel="stylesheet" href="./dist/output.css">
+    <title>Category</title>
+</head>
+
+<body>
+    <header>
+        <section class="">
+            <!-- Navbar -->
+            <nav class="relative flex items-center w-full justify-between border shadow-sm">
+                <!-- Mobile Nav Links -->
+                <img onclick="showNavMenu()" src="./src/images/hamburger-dark.svg" alt="hamburger menu"
+                    class="lg:hidden px-4 py-1" id="hamburgerBtn">
+                <ul id="hamburgerMenuList"
+                    class="top-0 fixed h-screen w-4/5 bg-white p-0 z-50 border-r border-black shadow-md -left-full transition-all">
+                    <li class="text-black text-left border-b" onclick="hideNavMenu()">
+                        <img src="./src/images/cross.png" alt="cross" class=" z-50">
+                    </li>
+                    <li onclick="showExploreList()"
+                        class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-black text-left flex items-center justify-between">
+                        <span class="w-full">
+                            Explore
+                        </span>
+                        <span class="w-px h-full bg-black bg-opacity-10 mx-4">
+                        </span>
+                        <img src="./src/images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
+                    </li>
+
+                    <!-- Additional Explore List Start -->
+                    <ul class="invisible  bg-stone-50 transition-all" id="exploreList">
+                        <li
+                            class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-black text-left flex items-center justify-between">
+                            <span class="w-full">
+                                Food
+                            </span>
+                            <span class="w-px h-full bg-black bg-opacity-10 mx-4">
+                            </span>
+                            <img src="./src/images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
+                        </li>
+                        <li
+                            class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-black text-left flex items-center justify-between">
+                            <span class="w-full">
+                                Entertainment
+                            </span>
+                            <span class="w-px h-full bg-black bg-opacity-10 mx-4">
+                            </span>
+                            <img src="./src/images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
+                        </li>
+                        <li
+                            class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-black text-left flex items-center justify-between">
+                            <span class="w-full">
+                                Lodging
+                            </span>
+                            <span class="w-px h-full bg-black bg-opacity-10 mx-4">
+                            </span>
+                            <img src="./src/images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
+                        </li>
+                        <li
+                            class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-black text-left flex items-center justify-between">
+                            <span class="w-full">
+                                Nightlife
+                            </span>
+                            <span class="w-px h-full bg-black bg-opacity-10 mx-4">
+                            </span>
+                            <img src="./src/images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
+                        </li>
+                        <li
+                            class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-black text-left flex items-center justify-between">
+                            <span class="w-full">
+                                Outdoors
+                            </span>
+                            <span class="w-px h-full bg-black bg-opacity-10 mx-4">
+                            </span>
+                            <img src="./src/images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
+                        </li>
+                        <li
+                            class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-black text-left flex items-center justify-between">
+                            <span class="w-full">
+                                Shops
+                            </span>
+                            <span class="w-px h-full bg-black bg-opacity-10 mx-4">
+                            </span>
+                            <img src="./src/images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
+                        </li>
+                    </ul>
+                    <!-- Additional Explore List End ^-->
+
+                    <li onclick="showHelpList()"
+                        class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-black text-left flex items-center justify-between">
+                        <span class="w-full">
+                            Help
+                        </span>
+                        <span class="w-px h-full bg-black bg-opacity-10 mx-4">
+                        </span>
+                        <img src="./src/images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
+                    </li>
+
+                    <!-- Additional Help List Start -->
+                    <ul class="invisible bg-stone-50 transition-all" id="helpList">
+                        <li
+                            class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-black text-left flex items-center">
+                            How it works
+                        </li>
+                        <li
+                            class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-black text-left flex items-center">
+                            Special Offers
+                        </li>
+                        <li
+                            class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-black text-left flex items-center">
+                            Listing(No Maps)
+                        </li>
+                        <li
+                            class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-black text-left flex items-center">
+                            Advanced Filters(Demo)
+                        </li>
+                    </ul>
+                    <!-- Additional Help List End -->
+
+                    <li
+                        class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-black text-left flex items-center">
+                        Blog
+                    </li>
+                    <li
+                        class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-black text-left flex items-center">
+                        Log In
+                    </li>
+                    <li
+                        class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-black text-left flex items-center">
+                        Add Listing
+                    </li>
+                </ul>
+                <span style="border-top: 0; border-bottom:0;"
+                    class="h-full flex items-center w-full justify-center border  border-black p-2  ">
+                    <img class="h-8 lg:px-4 px-2" src="./src/images/Logo-dark.svg" alt="Logo">
+                </span>
+                <img class="h-8 px-4 py-1 relative z-30" onclick="showNavSearchInput()"
+                    src="./src/images/search-dark.svg" alt="search">
+                <div id="navSearchInput"
+                    class="invisible transition-all top absolute flex justify-between top-0 w-full h-full">
+                    <input type="text" class="w-full border-black h-full px-4" placeholder="What Are You Looking For">
+                    <img class="w-1/5 z-50 bg-white  border border-white" style="border-left-color: #E5E7EB;"
+                        src="./src/images/cross.png" onclick="hideNavSearchInput()" alt="cross">
+                </div>
+            </nav>
+        </section>
+    </header>
+
+
+    <script src="./src/js/index.js"></script>
+</body>
+
+</html>

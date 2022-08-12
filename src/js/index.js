@@ -53,3 +53,18 @@ document.onclick = function (e) {
             hideNavMenu();
     }
 };
+
+
+// Navbar Open Search
+
+const navSearchInput = document.getElementById("navSearchInput");
+
+function showNavSearchInput() {
+    navSearchInput.classList.remove("invisible");
+    // searchInputContainer.classList.add("rounded-b-none");
+}
+
+function hideNavSearchInput() {
+    navSearchInput.classList.add("invisible");
+    // searchInputContainer.classList.remove("rounded-b-none");
+}

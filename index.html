@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./dist/output.css" rel="stylesheet">
     <link rel="stylesheet" href="./src/index.css">
+    <title>Home</title>
 </head>
 
 <body>
@@ -22,10 +23,10 @@
             <!-- Navbar -->
             <nav class="flex items-center  h-full w-full lg:justify-between">
                 <!-- Mobile Nav Links -->
-                <img onclick="showNavMenu()" src="./src/images/hamburger.svg" alt="hamburger menu" class="lg:hidden"
-                    id="hamburgerBtn">
+                <img onclick="showNavMenu()" src="./src/images/hamburger.svg" alt="hamburger menu"
+                    class="lg:hidden opacity-50" id="hamburgerBtn">
                 <ul id="hamburgerMenuList"
-                    class="top-0 absolute h-screen w-4/5 bg-white p-0 z-50 -left-full transition-all">
+                    class="top-0 fixed h-screen w-4/5 bg-white p-0 z-50 -left-full transition-all">
                     <li class="text-black text-left border-b" onclick="hideNavMenu()">
                         <img src="./src/images/cross.png" alt="cross" class=" z-50">
                     </li>
@@ -473,7 +474,7 @@
     </header>
 
     <!-- Main Content Of Page -->
-    <main class="">
+    <main class=" relative z-10">
         <!-- Interested In Section -->
         <section class="h-full w-full py-8 lg:py-16">
             <header class="text-center my-5  p-2">
