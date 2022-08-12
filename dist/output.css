@@ -612,10 +612,6 @@ html {
   right: 0px;
 }
 
-.bottom-0 {
-  bottom: 0px;
-}
-
 .z-50 {
   z-index: 50;
 }
@@ -770,6 +766,10 @@ html {
   width: 1.5rem;
 }
 
+.w-4 {
+  width: 1rem;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -789,6 +789,10 @@ html {
 
 .flex-col {
   flex-direction: column;
+}
+
+.content-center {
+  align-content: center;
 }
 
 .items-center {
@@ -826,10 +830,6 @@ html {
 
 .overflow-hidden {
   overflow: hidden;
-}
-
-.overflow-visible {
-  overflow: visible;
 }
 
 .whitespace-nowrap {
@@ -1183,12 +1183,6 @@ html {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.shadow {
-  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -1219,6 +1213,11 @@ html {
   right: 0px;
 }
 
+.after\:m-3::after {
+  content: var(--tw-content);
+  margin: 0.75rem;
+}
+
 .after\:flex::after {
   content: var(--tw-content);
   display: flex;
@@ -1229,9 +1228,19 @@ html {
   height: 1.5rem;
 }
 
+.after\:h-3::after {
+  content: var(--tw-content);
+  height: 0.75rem;
+}
+
 .after\:w-6::after {
   content: var(--tw-content);
   width: 1.5rem;
+}
+
+.after\:w-3::after {
+  content: var(--tw-content);
+  width: 0.75rem;
 }
 
 .after\:items-center::after {
@@ -1264,6 +1273,11 @@ html {
   content: var(--tw-content);
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.after\:opacity-50::after {
+  content: var(--tw-content);
+  opacity: 0.5;
 }
 
 .after\:content-\[\'11\'\]::after {
@@ -1364,6 +1378,18 @@ html {
 }
 
 @media (min-width: 1024px) {
+  .lg\:absolute {
+    position: absolute;
+  }
+
+  .lg\:relative {
+    position: relative;
+  }
+
+  .lg\:m-5 {
+    margin: 1.25rem;
+  }
+
   .lg\:my-9 {
     margin-top: 2.25rem;
     margin-bottom: 2.25rem;
@@ -1395,6 +1421,10 @@ html {
 
   .lg\:flex {
     display: flex;
+  }
+
+  .lg\:grid {
+    display: grid;
   }
 
   .lg\:hidden {
@@ -1447,6 +1477,10 @@ html {
 
   .lg\:justify-between {
     justify-content: space-between;
+  }
+
+  .lg\:justify-around {
+    justify-content: space-around;
   }
 
   .lg\:justify-evenly {
