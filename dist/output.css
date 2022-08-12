@@ -734,6 +734,18 @@ html {
   height: 13rem;
 }
 
+.h-72 {
+  height: 18rem;
+}
+
+.h-64 {
+  height: 16rem;
+}
+
+.h-60 {
+  height: 15rem;
+}
+
 .w-full {
   width: 100%;
 }
@@ -776,6 +788,14 @@ html {
 
 .w-4 {
   width: 1rem;
+}
+
+.w-56 {
+  width: 14rem;
+}
+
+.w-44 {
+  width: 11rem;
 }
 
 .flex-1 {
