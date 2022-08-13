@@ -666,6 +666,11 @@ html {
   margin-bottom: 1.25rem;
 }
 
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
 .mr-1 {
   margin-right: 0.25rem;
 }
@@ -818,6 +823,10 @@ html {
 .gap-x-5 {
   -moz-column-gap: 1.25rem;
        column-gap: 1.25rem;
+}
+
+.justify-self-center {
+  justify-self: center;
 }
 
 .overflow-hidden {
@@ -985,6 +994,14 @@ html {
   padding: 1rem;
 }
 
+.p-20 {
+  padding: 5rem;
+}
+
+.p-80 {
+  padding: 20rem;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1110,6 +1127,16 @@ html {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .font-light {
@@ -1339,6 +1366,28 @@ html {
   color: rgb(255 77 85 / var(--tw-text-opacity));
 }
 
+@media (min-width: 640px) {
+  .sm\:m-10 {
+    margin: 2.5rem;
+  }
+
+  .sm\:m-5 {
+    margin: 1.25rem;
+  }
+
+  .sm\:grid {
+    display: grid;
+  }
+
+  .sm\:w-72 {
+    width: 18rem;
+  }
+
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (min-width: 768px) {
   .md\:m-10 {
     margin: 2.5rem;
@@ -1453,8 +1502,20 @@ html {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  .lg\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-none {
+    grid-template-columns: none;
+  }
+
   .lg\:flex-row {
     flex-direction: row;
+  }
+
+  .lg\:flex-col {
+    flex-direction: column;
   }
 
   .lg\:justify-start {
