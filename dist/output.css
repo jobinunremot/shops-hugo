@@ -632,6 +632,10 @@ html {
   z-index: 20;
 }
 
+.-z-10 {
+  z-index: -10;
+}
+
 .m-2 {
   margin: 0.5rem;
 }
@@ -885,6 +889,10 @@ html {
 .gap-x-5 {
   -moz-column-gap: 1.25rem;
        column-gap: 1.25rem;
+}
+
+.overflow-auto {
+  overflow: auto;
 }
 
 .overflow-hidden {
@@ -1620,6 +1628,18 @@ html {
 
   .lg\:justify-evenly {
     justify-content: space-evenly;
+  }
+
+  .lg\:overflow-auto {
+    overflow: auto;
+  }
+
+  .lg\:overflow-hidden {
+    overflow: hidden;
+  }
+
+  .lg\:overflow-visible {
+    overflow: visible;
   }
 
   .lg\:rounded-sm {
