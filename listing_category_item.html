@@ -660,12 +660,13 @@
 
                             <p class="mb-1 mt-3 font-medium">Your overall rating of this listing</p>
                             <div class="py-2 ">
-                                <span class="fa fa-star text-primary"></span>
-                                <span class="fa fa-star text-primary"></span>
-                                <span class="fa fa-star text-primary"></span>
-                                <span class="fa fa-star text-primary"></span>
-                                <span class="fa fa-star text-secondary"></span>
-                                <span class="mx-5 border px-3 py-1 rounded-md">Excellent</span>
+                                <span onclick="ratingUpdate(0)" class="fa fa-star give-rating text-primary"></span>
+                                <span onclick="ratingUpdate(1)" class="fa fa-star give-rating text-primary"></span>
+                                <span onclick="ratingUpdate(2)" class="fa fa-star give-rating text-primary"></span>
+                                <span onclick="ratingUpdate(3)" class="fa fa-star give-rating text-primary"></span>
+                                <span onclick="ratingUpdate(4)" class="fa fa-star give-rating text-secondary"></span>
+                                <span id="reviewRatingSummarized" class="mx-5 border px-3 py-1 rounded-md">Very
+                                    Good</span>
                             </div>
                             <label class="mb-1 mt-3 font-medium" for="title">Title of your review</label>
                             <input class="w-full p-2.5 rounded-sm border placeholder:text-sm" type="text" name="title"

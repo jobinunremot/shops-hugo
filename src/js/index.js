@@ -145,3 +145,33 @@ function hideMap() {
     categoryMapContent.classList.add("hidden");
 }
 
+
+// Rating
+function ratingUpdate(ratingIndex) {
+    const givenRating = document.getElementsByClassName("give-rating");
+    const reviewRatingSummarized = document.getElementById("reviewRatingSummarized");
+
+    for (let i = 0; i <= givenRating.length - 1; i++) {
+        if (i <= ratingIndex) {
+            givenRating[i].classList.add("text-primary");
+            givenRating[i].classList.remove("text-secondary");
+        } else {
+            givenRating[i].classList.remove("text-primary");
+            givenRating[i].classList.add("text-secondary");
+        }
+    }
+
+    if (ratingIndex === 0) {
+        reviewRatingSummarized.innerHTML = "Terrible";
+    } else if (ratingIndex === 1) {
+        reviewRatingSummarized.innerHTML = "Poor";
+    } else if (ratingIndex === 2) {
+        reviewRatingSummarized.innerHTML = "Average";
+    } else if (ratingIndex === 3) {
+        reviewRatingSummarized.innerHTML = "Very Good";
+    } else if (ratingIndex === 4) {
+        reviewRatingSummarized.innerHTML = "Exceptional";
+    }
+
+
+}
