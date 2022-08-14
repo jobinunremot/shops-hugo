@@ -90,3 +90,29 @@
 .hide {
   display: none;
 }
+
+/* Carousel Styling */
+.carousel-cell img {
+  height: 450px;
+  width: 600px;
+  margin-right: 0.25rem;
+}
+
+/* icon color */
+.arrow {
+  fill: #ff4d55;
+}
+.flickity-button {
+  background: white !important;
+}
+
+.flickity-prev-next-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+/* hide disabled button */
+.flickity-button:disabled {
+  display: none;
+}

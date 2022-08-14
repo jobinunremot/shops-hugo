@@ -145,5 +145,3 @@ function hideMap() {
     categoryMapContent.classList.add("hidden");
 }
 
-
-

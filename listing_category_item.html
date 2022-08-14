@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./dist/output.css" rel="stylesheet">
     <link rel="stylesheet" href="./src/index.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Roberto</title>
 </head>
@@ -469,12 +471,26 @@
     <main class="bg-stone-50  pb-6">
 
         <header class="">
-            <!-- Corousel -->
-            <section class="flex w-screen">
-                <img src="https://picsum.photos/600/450?random=5" class="w-1/4" alt="Main Img">
-                <img src="https://picsum.photos/600/450?random=1" class="w-1/4" alt="Main Img">
-                <img src="https://picsum.photos/600/450?random=10" class="w-1/4" alt="Main Img">
-                <img src="https://picsum.photos/600/450?random=15" class="w-1/4" alt="Main Img">
+
+            <!-- Carousel -->
+            <section class="main-carousel"
+                data-flickity='{ "cellAlign": "left", "contain": true, "groupCells": true, "groupCells": "80%","pageDots": false }'>
+
+                <div class="carousel-cell ">
+                    <img src="https://picsum.photos/600/450?random=25" class="" alt="Main Img">
+                </div>
+                <div class="carousel-cell ">
+                    <img src="https://picsum.photos/600/450?random=5" class="" alt="Main Img">
+                </div>
+                <div class="carousel-cell ">
+                    <img src="https://picsum.photos/600/450?random=1" class="" alt="Main Img">
+                </div>
+                <div class="carousel-cell ">
+                    <img src="https://picsum.photos/600/450?random=10" class="" alt="Main Img">
+                </div>
+                <div class="carousel-cell ">
+                    <img src="https://picsum.photos/600/450?random=15" class="" alt="Main Img">
+                </div>
             </section>
             <div class="p-5 lg:py-10 lg:px-36 xl:px-48">
                 <div>
@@ -710,6 +726,12 @@
             <p>Copyright © 2019 Company Inc. • Address • Tel: 42-898-4363 • Contact</p>
         </section>
     </footer>
+
+    <!-- JavaScript -->
+    <script src="./src/js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
 </body>
 
