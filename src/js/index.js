@@ -2,7 +2,6 @@
 const searchList = document.getElementById("searchList");
 const searchInputContainer = document.getElementById("searchInputContainer");
 
-
 function showSearchList() {
     searchList.classList.remove("invisible");
     searchInputContainer.classList.add("rounded-b-none");
