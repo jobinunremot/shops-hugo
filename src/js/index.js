@@ -133,16 +133,19 @@ function showFilterForm() {
 
 // Show Map on Mobile Screen 2nd Page
 function showMap() {
+    const footerSection = document.getElementById("footer");
     const categoryGalleryContent = document.getElementById("categoryGalleryContent");
     const categoryMapContent = document.getElementById("categoryMapContent");
     categoryGalleryContent.classList.add("hidden");
     categoryMapContent.classList.remove("hidden");
+    footerSection.classList.add("hidden");
 }
 function hideMap() {
     const categoryGalleryContent = document.getElementById("categoryGalleryContent");
     const categoryMapContent = document.getElementById("categoryMapContent");
     categoryGalleryContent.classList.remove("hidden");
     categoryMapContent.classList.add("hidden");
+    footerSection.classList.remove("hidden");
 }
 
 
