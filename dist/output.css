@@ -1548,6 +1548,11 @@ html {
     margin-bottom: 0px;
   }
 
+  .sm\:mx-5 {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+  }
+
   .sm\:flex {
     display: flex;
   }
