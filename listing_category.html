@@ -9,7 +9,7 @@
     <title>Category</title>
 </head>
 
-<body class="relative">
+<body class="relative h-full">
     <header class="sticky top-0 z-50 bg-white">
 
         <!-- Navbar -->
@@ -463,408 +463,494 @@
 
     </header>
 
-    <main class="bg-stone-50 h-full lg:flex ">
-        <section id="categoryGalleryContent" class="h-full w-full">
-            <header class="">
-                <form action="" id="filterForm"
-                    class="hidden lg:flex lg:flex-row lg:justify-around flex-col bg-white w-full p-4 ">
-                    <select class="border p-2 lg:w-full rounded-sm m-2 text-black text-opacity-50 font-light text-sm"
-                        name="" id="">
-                        <option class="hover:text-primary transition-all field-option " value="all">All Regions
-                        </option>
-                        <option class="hover:text-primary transition-all field-option " value="chelsea">Chelsea
-                        </option>
-                        <option class="hover:text-primary transition-all field-option " value="london">City Of London
-                        </option>
-                        <option class="hover:text-primary transition-all field-option " value="kensington">Kensington
-                        </option>
-                        <option class="hover:text-primary transition-all field-option " value="king's cross">King's
-                            Cross</option>
-                        <option class="hover:text-primary transition-all field-option " value="soho district">Soho
-                            District</option>
-                        <option class="hover:text-primary transition-all field-option " value="westminster">
-                            Westminster</option>
-                    </select>
-                    <select class="border p-2 lg:w-full  rounded-sm m-2 text-black text-opacity-50 font-light text-sm"
-                        name="search_categories[]" id="search_categories" data-placeholder="Choose a category…"
-                        data-no_results_text="No results match" data-multiple_text="Select Some Options">
-                        <option value="">Any category</option>
-                        <option class="hover:text-primary transition-all field-option level-0" value="14">Arts &amp;
-                            Entertainment</option>
-                        <option class="hover:text-primary transition-all field-option level-1" value="15">
-                            &nbsp;&nbsp;&nbsp;Art Gallery</option>
-                        <option class="hover:text-primary transition-all field-option level-1" value="66">
-                            &nbsp;&nbsp;&nbsp;Movie Theater</option>
-                        <option class="hover:text-primary transition-all field-option level-1" value="16">
-                            &nbsp;&nbsp;&nbsp;Museum</option>
-                        <option class="hover:text-primary transition-all field-option level-1" value="17">
-                            &nbsp;&nbsp;&nbsp;Stadium</option>
-                        <option class="hover:text-primary transition-all field-option level-1" value="18">
-                            &nbsp;&nbsp;&nbsp;Zoo</option>
-                        <option class="hover:text-primary transition-all field-option level-0" value="19">Event
-                        </option>
-                        <option class="hover:text-primary transition-all field-option level-1" value="20">
-                            &nbsp;&nbsp;&nbsp;Conference</option>
-                        <option class="hover:text-primary transition-all field-option level-1" value="21">
-                            &nbsp;&nbsp;&nbsp;Festival</option>
-                        <option class="hover:text-primary transition-all field-option level-0" value="22">Food
-                        </option>
-                        <option class="hover:text-primary transition-all field-option level-1" value="23">
-                            &nbsp;&nbsp;&nbsp;Bakery</option>
-                        <option class="hover:text-primary transition-all field-option level-1" value="24">
-                            &nbsp;&nbsp;&nbsp;Café</option>
-                        <option class="hover:text-primary transition-all field-option level-1" value="25">
-                            &nbsp;&nbsp;&nbsp;Pizza Place</option>
-                        <option class="hover:text-primary transition-all field-option level-1" value="26">
-                            &nbsp;&nbsp;&nbsp;Restaurant</option>
-                        <option class="hover:text-primary transition-all field-option level-1" value="27">
-                            &nbsp;&nbsp;&nbsp;Winery</option>
-                        <option class="hover:text-primary transition-all field-option level-0" value="67">Lodging
-                        </option>
-                        <option class="hover:text-primary transition-all field-option level-1" value="69">
-                            &nbsp;&nbsp;&nbsp;Apartment</option>
-                        <option class="hover:text-primary transition-all field-option level-1" value="71">
-                            &nbsp;&nbsp;&nbsp;Hostel</option>
-                        <option class="hover:text-primary transition-all field-option level-1" value="68">
-                            &nbsp;&nbsp;&nbsp;Hotels</option>
-                        <option class="hover:text-primary transition-all field-option level-1" value="70">
-                            &nbsp;&nbsp;&nbsp;Villas</option>
-                        <option class="hover:text-primary transition-all field-option level-0" value="28">Nightlife
-                        </option>
-                        <option class="hover:text-primary transition-all field-option level-1" value="29">
-                            &nbsp;&nbsp;&nbsp;Bar</option>
-                        <option class="hover:text-primary transition-all field-option level-1" value="30">
-                            &nbsp;&nbsp;&nbsp;Brewery</option>
-                        <option class="hover:text-primary transition-all field-option level-1" value="31">
-                            &nbsp;&nbsp;&nbsp;Lounge</option>
-                        <option class="hover:text-primary transition-all field-option level-1" value="32">
-                            &nbsp;&nbsp;&nbsp;Nightclub</option>
-                        <option class="hover:text-primary transition-all field-option level-0" value="33">Outdoors
-                            &amp; Recreation</option>
-                        <option class="hover:text-primary transition-all field-option level-1" value="34">
-                            &nbsp;&nbsp;&nbsp;Bridge</option>
-                        <option class="hover:text-primary transition-all field-option level-1" value="35">
-                            &nbsp;&nbsp;&nbsp;Park</option>
-                        <option class="hover:text-primary transition-all field-option level-0" value="36">Service
-                        </option>
-                        <option class="hover:text-primary transition-all field-option level-1" value="37">
-                            &nbsp;&nbsp;&nbsp;Car Dealership</option>
-                        <option class="hover:text-primary transition-all field-option level-1" value="38">
-                            &nbsp;&nbsp;&nbsp;Design Studio</option>
-                        <option class="hover:text-primary transition-all field-option level-1" value="39">
-                            &nbsp;&nbsp;&nbsp;Dry Cleaner</option>
-                        <option class="hover:text-primary transition-all field-option level-1" value="40">
-                            &nbsp;&nbsp;&nbsp;Home Service</option>
-                        <option class="hover:text-primary transition-all field-option level-0" value="41">Shops
-                        </option>
-                        <option class="hover:text-primary transition-all field-option level-1" value="42">
-                            &nbsp;&nbsp;&nbsp;Bank</option>
-                        <option class="hover:text-primary transition-all field-option level-1" value="43">
-                            &nbsp;&nbsp;&nbsp;Bookstore</option>
-                        <option class="hover:text-primary transition-all field-option level-1" value="44">
-                            &nbsp;&nbsp;&nbsp;Clothing Store</option>
-                        <option class="hover:text-primary transition-all field-option level-1" value="45">
-                            &nbsp;&nbsp;&nbsp;Furniture / Home</option>
-                    </select>
-                    <div class="dropdown lg:w-full m-2">
-                        <div id="myDropdown" class="dropdown-content rounded-sm border w-full flex lg:relative">
-                            <input class="w-full p-2 bg-white text-black text-opacity-50 font-light text-sm"
-                                onfocus="activateFilterField()" onblur="activateFilterField()" type="text"
-                                placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    <section class="relative ">
+        <main class="bg-stone-50  w-full lg:flex ">
+            <section id="categoryGalleryContent" class=" w-full">
+                <header class="">
+                    <form action="" id="filterForm"
+                        class="hidden lg:flex lg:flex-row lg:justify-around flex-col bg-white w-full p-4 ">
+                        <select
+                            class="border p-2 lg:w-full rounded-sm m-2 text-black text-opacity-50 font-light text-sm"
+                            name="" id="">
+                            <option class="hover:text-primary transition-all field-option " value="all">All Regions
+                            </option>
+                            <option class="hover:text-primary transition-all field-option " value="chelsea">Chelsea
+                            </option>
+                            <option class="hover:text-primary transition-all field-option " value="london">City Of
+                                London
+                            </option>
+                            <option class="hover:text-primary transition-all field-option " value="kensington">
+                                Kensington
+                            </option>
+                            <option class="hover:text-primary transition-all field-option " value="king's cross">King's
+                                Cross</option>
+                            <option class="hover:text-primary transition-all field-option " value="soho district">Soho
+                                District</option>
+                            <option class="hover:text-primary transition-all field-option " value="westminster">
+                                Westminster</option>
+                        </select>
+                        <select
+                            class="border p-2 lg:w-full  rounded-sm m-2 text-black text-opacity-50 font-light text-sm"
+                            name="search_categories[]" id="search_categories" data-placeholder="Choose a category…"
+                            data-no_results_text="No results match" data-multiple_text="Select Some Options">
+                            <option value="">Any category</option>
+                            <option class="hover:text-primary transition-all field-option level-0" value="14">Arts &amp;
+                                Entertainment</option>
+                            <option class="hover:text-primary transition-all field-option level-1" value="15">
+                                &nbsp;&nbsp;&nbsp;Art Gallery</option>
+                            <option class="hover:text-primary transition-all field-option level-1" value="66">
+                                &nbsp;&nbsp;&nbsp;Movie Theater</option>
+                            <option class="hover:text-primary transition-all field-option level-1" value="16">
+                                &nbsp;&nbsp;&nbsp;Museum</option>
+                            <option class="hover:text-primary transition-all field-option level-1" value="17">
+                                &nbsp;&nbsp;&nbsp;Stadium</option>
+                            <option class="hover:text-primary transition-all field-option level-1" value="18">
+                                &nbsp;&nbsp;&nbsp;Zoo</option>
+                            <option class="hover:text-primary transition-all field-option level-0" value="19">Event
+                            </option>
+                            <option class="hover:text-primary transition-all field-option level-1" value="20">
+                                &nbsp;&nbsp;&nbsp;Conference</option>
+                            <option class="hover:text-primary transition-all field-option level-1" value="21">
+                                &nbsp;&nbsp;&nbsp;Festival</option>
+                            <option class="hover:text-primary transition-all field-option level-0" value="22">Food
+                            </option>
+                            <option class="hover:text-primary transition-all field-option level-1" value="23">
+                                &nbsp;&nbsp;&nbsp;Bakery</option>
+                            <option class="hover:text-primary transition-all field-option level-1" value="24">
+                                &nbsp;&nbsp;&nbsp;Café</option>
+                            <option class="hover:text-primary transition-all field-option level-1" value="25">
+                                &nbsp;&nbsp;&nbsp;Pizza Place</option>
+                            <option class="hover:text-primary transition-all field-option level-1" value="26">
+                                &nbsp;&nbsp;&nbsp;Restaurant</option>
+                            <option class="hover:text-primary transition-all field-option level-1" value="27">
+                                &nbsp;&nbsp;&nbsp;Winery</option>
+                            <option class="hover:text-primary transition-all field-option level-0" value="67">Lodging
+                            </option>
+                            <option class="hover:text-primary transition-all field-option level-1" value="69">
+                                &nbsp;&nbsp;&nbsp;Apartment</option>
+                            <option class="hover:text-primary transition-all field-option level-1" value="71">
+                                &nbsp;&nbsp;&nbsp;Hostel</option>
+                            <option class="hover:text-primary transition-all field-option level-1" value="68">
+                                &nbsp;&nbsp;&nbsp;Hotels</option>
+                            <option class="hover:text-primary transition-all field-option level-1" value="70">
+                                &nbsp;&nbsp;&nbsp;Villas</option>
+                            <option class="hover:text-primary transition-all field-option level-0" value="28">Nightlife
+                            </option>
+                            <option class="hover:text-primary transition-all field-option level-1" value="29">
+                                &nbsp;&nbsp;&nbsp;Bar</option>
+                            <option class="hover:text-primary transition-all field-option level-1" value="30">
+                                &nbsp;&nbsp;&nbsp;Brewery</option>
+                            <option class="hover:text-primary transition-all field-option level-1" value="31">
+                                &nbsp;&nbsp;&nbsp;Lounge</option>
+                            <option class="hover:text-primary transition-all field-option level-1" value="32">
+                                &nbsp;&nbsp;&nbsp;Nightclub</option>
+                            <option class="hover:text-primary transition-all field-option level-0" value="33">Outdoors
+                                &amp; Recreation</option>
+                            <option class="hover:text-primary transition-all field-option level-1" value="34">
+                                &nbsp;&nbsp;&nbsp;Bridge</option>
+                            <option class="hover:text-primary transition-all field-option level-1" value="35">
+                                &nbsp;&nbsp;&nbsp;Park</option>
+                            <option class="hover:text-primary transition-all field-option level-0" value="36">Service
+                            </option>
+                            <option class="hover:text-primary transition-all field-option level-1" value="37">
+                                &nbsp;&nbsp;&nbsp;Car Dealership</option>
+                            <option class="hover:text-primary transition-all field-option level-1" value="38">
+                                &nbsp;&nbsp;&nbsp;Design Studio</option>
+                            <option class="hover:text-primary transition-all field-option level-1" value="39">
+                                &nbsp;&nbsp;&nbsp;Dry Cleaner</option>
+                            <option class="hover:text-primary transition-all field-option level-1" value="40">
+                                &nbsp;&nbsp;&nbsp;Home Service</option>
+                            <option class="hover:text-primary transition-all field-option level-0" value="41">Shops
+                            </option>
+                            <option class="hover:text-primary transition-all field-option level-1" value="42">
+                                &nbsp;&nbsp;&nbsp;Bank</option>
+                            <option class="hover:text-primary transition-all field-option level-1" value="43">
+                                &nbsp;&nbsp;&nbsp;Bookstore</option>
+                            <option class="hover:text-primary transition-all field-option level-1" value="44">
+                                &nbsp;&nbsp;&nbsp;Clothing Store</option>
+                            <option class="hover:text-primary transition-all field-option level-1" value="45">
+                                &nbsp;&nbsp;&nbsp;Furniture / Home</option>
+                        </select>
+                        <div class="dropdown lg:w-full m-2">
+                            <div id="myDropdown" class="dropdown-content rounded-sm border w-full flex lg:relative">
+                                <input class="w-full p-2 bg-white text-black text-opacity-50 font-light text-sm"
+                                    onfocus="activateFilterField()" onblur="activateFilterField()" type="text"
+                                    placeholder="Search.." id="myInput" onkeyup="filterFunction()">
 
-                            <div class="lg:absolute lg:bg-white lg:w-full">
-                                <a class="filter-options p-2 text-black text-opacity-50 hover:text-primary transition-all hide"
-                                    href="#CreditCards">Accepts Credit
-                                    Cards</a>
-                                <a class="filter-options p-2 text-black text-opacity-50 hover:text-primary transition-all hide"
-                                    href="#BikeParking">Bike
-                                    Parking</a>
-                                <a class="filter-options p-2 text-black text-opacity-50 hover:text-primary transition-all hide"
-                                    href="#ContactForm">Contact
-                                    Form</a>
-                                <a class="filter-options p-2 text-black text-opacity-50 hover:text-primary transition-all hide"
-                                    href="#Coupons">Coupons</a>
-                                <a class="filter-options p-2 text-black text-opacity-50 hover:text-primary transition-all hide"
-                                    href="#FamilyFriendly">Family Friendly</a>
-                                <a class="filter-options p-2 text-black text-opacity-50 hover:text-primary transition-all hide"
-                                    href="#FreeEntry">Free
-                                    Entry</a>
-                                <a class="filter-options p-2 text-black text-opacity-50 hover:text-primary transition-all hide"
-                                    href="#Italian">Italian</a>
+                                <div class="lg:absolute lg:bg-white lg:w-full">
+                                    <a class="filter-options p-2 text-black text-opacity-50 hover:text-primary transition-all hide"
+                                        href="#CreditCards">Accepts Credit
+                                        Cards</a>
+                                    <a class="filter-options p-2 text-black text-opacity-50 hover:text-primary transition-all hide"
+                                        href="#BikeParking">Bike
+                                        Parking</a>
+                                    <a class="filter-options p-2 text-black text-opacity-50 hover:text-primary transition-all hide"
+                                        href="#ContactForm">Contact
+                                        Form</a>
+                                    <a class="filter-options p-2 text-black text-opacity-50 hover:text-primary transition-all hide"
+                                        href="#Coupons">Coupons</a>
+                                    <a class="filter-options p-2 text-black text-opacity-50 hover:text-primary transition-all hide"
+                                        href="#FamilyFriendly">Family Friendly</a>
+                                    <a class="filter-options p-2 text-black text-opacity-50 hover:text-primary transition-all hide"
+                                        href="#FreeEntry">Free
+                                        Entry</a>
+                                    <a class="filter-options p-2 text-black text-opacity-50 hover:text-primary transition-all hide"
+                                        href="#Italian">Italian</a>
+                                </div>
                             </div>
                         </div>
+                    </form>
+
+                    <div class="p-6 flex justify-between lg:hidden">
+                        <button onclick="showFilterForm()"
+                            class="bg-primary active:bg-secondary hover:bg-secondary transition-all text-white flex px-3 py-2 rounded-md font-light lg:hidden">
+                            <img src="https://demos.pixelgrade.com/listable/wp-content/themes/listable/assets/svg/filter.svg"
+                                alt="filter" class="mr-3">
+                            Filter
+                        </button>
+                        <button class="lg:hidden">
+                            <img src="https://demos.pixelgrade.com/listable/wp-content/uploads/sites/17/2015/11/menu-map.svg"
+                                onclick="showMap()" alt="menu-map" class="w-6 h-6">
+                        </button>
                     </div>
-                </form>
 
-                <div class="p-6 flex justify-between lg:hidden">
-                    <button onclick="showFilterForm()"
-                        class="bg-primary active:bg-secondary hover:bg-secondary transition-all text-white flex px-3 py-2 rounded-md font-light lg:hidden">
-                        <img src="https://demos.pixelgrade.com/listable/wp-content/themes/listable/assets/svg/filter.svg"
-                            alt="filter" class="mr-3">
-                        Filter
-                    </button>
-                    <button class="lg:hidden">
-                        <img src="https://demos.pixelgrade.com/listable/wp-content/uploads/sites/17/2015/11/menu-map.svg"
-                            onclick="showMap()" alt="menu-map" class="w-6 h-6">
-                    </button>
-                </div>
+                </header>
+                <!-- Title and Heading -->
+                <section class="flex w-full flex-col text-left px-5 lg:px-10 lg:my-5">
+                    <h1 class="text-lg lg:text-2xl text-secondary sm:mx-5 ">Food Gallery</h1>
+                    <p class=" text-black text-opacity-50 sm:mx-5 ">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                        Maxime nulla
+                        molestias tempore in nulla eum ipsam
+                        itaque esse harum.</p>
+                </section>
+                <main
+                    class="sm:grid sm:grid-cols-2 lg:grid-cols-none xl:grid-cols-2 justify-center justify-items-center content-center w-full px-5">
+                    <article class=" border border-primary bg-white rounded-md my-5 sm:m-5 xl:w-72 lg:w-80 sm:w-72 ">
+                        <img src="https://picsum.photos/600/400?random=2" class="rounded-t-md w-full" alt="">
+                        <div class="p-5">
+                            <h1 class="text-2xl text-primary pt-3 font-light">Jago Foods</h1>
+                            <ul class="flex">
+                                <li
+                                    class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
+                                    European
+                                </li>
+                                <li
+                                    class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
+                                    Ashkenazi
+                                </li>
 
-            </header>
-            <!-- Title and Heading -->
-            <section class="flex w-full flex-col text-left px-5 lg:px-10 lg:my-5">
-                <h1 class="text-lg lg:text-2xl text-secondary sm:mx-5 ">Food Gallery</h1>
-                <p class=" text-black text-opacity-50 sm:mx-5 ">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Maxime nulla
-                    molestias tempore in nulla eum ipsam
-                    itaque esse harum.</p>
+                            </ul>
+                            <p class="text-black text-opacity-50 pb-8 text-sm text-light">
+                                1517 Halsey Avenue<br />
+                                Toronto, Ontario<br />
+                                Canada
+                            </p>
+                            <a href="./listing_category_item.html"
+                                class="border border-primary text-primary hover:border-secondary hover:text-secondary transition-all px-2 py-1 rounded-md">
+                                View Details
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class=" border border-primary bg-white rounded-md my-5 sm:m-5 xl:w-72 lg:w-80 sm:w-72 ">
+                        <img src="https://picsum.photos/600/400?random=1" class="rounded-t-md w-full" alt="">
+                        <div class="p-5">
+                            <h1 class="text-2xl text-primary pt-3 font-light">Roberto's</h1>
+                            <ul class="flex">
+                                <li
+                                    class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
+                                    Hand-made
+                                </li>
+                                <li
+                                    class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
+                                    Rustic Pizza
+                                </li>
+
+                            </ul>
+                            <p class="text-black text-opacity-50 pb-8 text-sm text-light">
+                                S2532 Rainy Day Drive <br />
+                                Chelsea, MA<br />
+                                US
+                            </p>
+                            <a href="./listing_category_item.html"
+                                class="border border-primary text-primary hover:border-secondary hover:text-secondary transition-all px-2 py-1 rounded-md">
+                                View Details
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class=" border border-primary bg-white rounded-md my-5 sm:m-5 xl:w-72 lg:w-80 sm:w-72 ">
+                        <img src="https://picsum.photos/600/400?random=3" class="rounded-t-md w-full" alt="">
+                        <div class="p-5">
+                            <h1 class="text-2xl text-primary pt-3 font-light">ACP Furniture</h1>
+                            <ul class="flex">
+                                <li
+                                    class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
+                                    Furniture
+                                </li>
+                                <li
+                                    class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
+                                    Home
+                                </li>
+                                <li
+                                    class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
+                                    Affordable
+                                </li>
+                            </ul>
+                            <p class="text-black text-opacity-50 pb-8 text-sm text-light">
+                                32 rue La Boétie <br />
+                                Paris, Federal<br />
+                                France
+                            </p>
+                            <a href="./listing_category_item.html"
+                                class="border border-primary text-primary hover:border-secondary hover:text-secondary transition-all px-2 py-1 rounded-md">
+                                View Details
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class=" border border-primary bg-white rounded-md my-5 sm:m-5 xl:w-72 lg:w-80 sm:w-72 ">
+                        <img src="https://picsum.photos/600/400?random=4" class="rounded-t-md w-full" alt="">
+                        <div class="p-5">
+                            <h1 class="text-2xl text-primary pt-3 font-light">Paesan</h1>
+                            <ul class="flex">
+                                <li
+                                    class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
+                                    Traditional
+                                </li>
+                                <li
+                                    class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
+                                    Home-Cooked
+                                </li>
+                            </ul>
+                            <p class="text-black text-opacity-50 pb-8 text-sm text-light">
+                                753 Lockhart Drive <br />
+                                Barrie, Ontario<br />
+                                Canada
+                            </p>
+                            <a href="./listing_category_item.html"
+                                class="border border-primary text-primary hover:border-secondary hover:text-secondary transition-all px-2 py-1 rounded-md">
+                                View Details
+                            </a>
+                        </div>
+                    </article>
+                    <article class=" border border-primary bg-white rounded-md my-5 sm:m-5 xl:w-72 lg:w-80 sm:w-72 ">
+                        <img src="https://picsum.photos/600/400?random=5" class="rounded-t-md w-full" alt="">
+                        <div class="p-5">
+                            <h1 class="text-2xl text-primary pt-3 font-light">Jago Foods</h1>
+                            <ul class="flex">
+                                <li
+                                    class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
+                                    European
+                                </li>
+                                <li
+                                    class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
+                                    Ashkenazi
+                                </li>
+
+                            </ul>
+                            <p class="text-black text-opacity-50 pb-8 text-sm text-light">
+                                1517 Halsey Avenue<br />
+                                Toronto, Ontario<br />
+                                Canada
+                            </p>
+                            <a href="./listing_category_item.html"
+                                class="border border-primary text-primary hover:border-secondary hover:text-secondary transition-all px-2 py-1 rounded-md">
+                                View Details
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class=" border border-primary bg-white rounded-md my-5 sm:m-5 xl:w-72 lg:w-80 sm:w-72 ">
+                        <img src="https://picsum.photos/600/400?random=6" class="rounded-t-md w-full" alt="">
+                        <div class="p-5">
+                            <h1 class="text-2xl text-primary pt-3 font-light">Roberto's</h1>
+                            <ul class="flex">
+                                <li
+                                    class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
+                                    Hand-made
+                                </li>
+                                <li
+                                    class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
+                                    Rustic Pizza
+                                </li>
+
+                            </ul>
+                            <p class="text-black text-opacity-50 pb-8 text-sm text-light">
+                                S2532 Rainy Day Drive <br />
+                                Chelsea, MA<br />
+                                US
+                            </p>
+                            <a href="./listing_category_item.html"
+                                class="border border-primary text-primary hover:border-secondary hover:text-secondary transition-all px-2 py-1 rounded-md">
+                                View Details
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class=" border border-primary bg-white rounded-md my-5 sm:m-5 xl:w-72 lg:w-80 sm:w-72 ">
+                        <img src="https://picsum.photos/600/400?random=7" class="rounded-t-md w-full" alt="">
+                        <div class="p-5">
+                            <h1 class="text-2xl text-primary pt-3 font-light">ACP Furniture</h1>
+                            <ul class="flex">
+                                <li
+                                    class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
+                                    Furniture
+                                </li>
+                                <li
+                                    class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
+                                    Home
+                                </li>
+                                <li
+                                    class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
+                                    Affordable
+                                </li>
+                            </ul>
+                            <p class="text-black text-opacity-50 pb-8 text-sm text-light">
+                                32 rue La Boétie <br />
+                                Paris, Federal<br />
+                                France
+                            </p>
+                            <a href="./listing_category_item.html"
+                                class="border border-primary text-primary hover:border-secondary hover:text-secondary transition-all px-2 py-1 rounded-md">
+                                View Details
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class=" border border-primary bg-white rounded-md my-5 sm:m-5 xl:w-72 lg:w-80 sm:w-72 ">
+                        <img src="https://picsum.photos/600/400?random=8" class="rounded-t-md w-full" alt="">
+                        <div class="p-5">
+                            <h1 class="text-2xl text-primary pt-3 font-light">Paesan</h1>
+                            <ul class="flex">
+                                <li
+                                    class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
+                                    Traditional
+                                </li>
+                                <li
+                                    class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
+                                    Home-Cooked
+                                </li>
+                            </ul>
+                            <p class="text-black text-opacity-50 pb-8 text-sm text-light">
+                                753 Lockhart Drive <br />
+                                Barrie, Ontario<br />
+                                Canada
+                            </p>
+                            <a href="./listing_category_item.html"
+                                class="border border-primary text-primary hover:border-secondary hover:text-secondary transition-all px-2 py-1 rounded-md">
+                                View Details
+                            </a>
+                        </div>
+                    </article>
+                </main>
+
+                <footer class="px-20 py-5 w-full flex justify-center">
+                    <button
+                        class="bg-white border text-center flex justify-between items-center rounded-sm sm:py-2 py-1 px-2 w-full sm:w-auto">
+                        <span
+                            class="w-full text-center text-black  text-opacity-50 text-sm hover:text-primary hover:text-opacity-100 transition-all px-1">
+                            Load More Listings
+                        </span>
+                        <img src="./src/images/down-arrow.png" alt="down-arrow" class="opacity-50  h-3 w-3">
+                    </button>
+                </footer>
             </section>
-            <main
-                class="sm:grid sm:grid-cols-2 lg:grid-cols-none xl:grid-cols-2 justify-center justify-items-center content-center w-full px-5">
-                <article class=" border border-primary bg-white rounded-md my-5 sm:m-5 xl:w-72 lg:w-80 sm:w-72 ">
-                    <img src="https://picsum.photos/600/400?random=2" class="rounded-t-md w-full" alt="">
-                    <div class="p-5">
-                        <h1 class="text-2xl text-primary pt-3 font-light">Jago Foods</h1>
-                        <ul class="flex">
-                            <li
-                                class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
-                                European
-                            </li>
-                            <li
-                                class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
-                                Ashkenazi
-                            </li>
 
-                        </ul>
-                        <p class="text-black text-opacity-50 pb-8 text-sm text-light">
-                            1517 Halsey Avenue<br />
-                            Toronto, Ontario<br />
-                            Canada
-                        </p>
-                        <a href="./listing_category_item.html"
-                            class="border border-primary text-primary hover:border-secondary hover:text-secondary transition-all px-2 py-1 rounded-md">
-                            View Details
-                        </a>
-                    </div>
-                </article>
-
-                <article class=" border border-primary bg-white rounded-md my-5 sm:m-5 xl:w-72 lg:w-80 sm:w-72 ">
-                    <img src="https://picsum.photos/600/400?random=1" class="rounded-t-md w-full" alt="">
-                    <div class="p-5">
-                        <h1 class="text-2xl text-primary pt-3 font-light">Roberto's</h1>
-                        <ul class="flex">
-                            <li
-                                class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
-                                Hand-made
-                            </li>
-                            <li
-                                class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
-                                Rustic Pizza
-                            </li>
-
-                        </ul>
-                        <p class="text-black text-opacity-50 pb-8 text-sm text-light">
-                            S2532 Rainy Day Drive <br />
-                            Chelsea, MA<br />
-                            US
-                        </p>
-                        <a href="./listing_category_item.html"
-                            class="border border-primary text-primary hover:border-secondary hover:text-secondary transition-all px-2 py-1 rounded-md">
-                            View Details
-                        </a>
-                    </div>
-                </article>
-
-                <article class=" border border-primary bg-white rounded-md my-5 sm:m-5 xl:w-72 lg:w-80 sm:w-72 ">
-                    <img src="https://picsum.photos/600/400?random=3" class="rounded-t-md w-full" alt="">
-                    <div class="p-5">
-                        <h1 class="text-2xl text-primary pt-3 font-light">ACP Furniture</h1>
-                        <ul class="flex">
-                            <li
-                                class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
-                                Furniture
-                            </li>
-                            <li
-                                class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
-                                Home
-                            </li>
-                            <li
-                                class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
-                                Affordable
-                            </li>
-                        </ul>
-                        <p class="text-black text-opacity-50 pb-8 text-sm text-light">
-                            32 rue La Boétie <br />
-                            Paris, Federal<br />
-                            France
-                        </p>
-                        <a href="./listing_category_item.html"
-                            class="border border-primary text-primary hover:border-secondary hover:text-secondary transition-all px-2 py-1 rounded-md">
-                            View Details
-                        </a>
-                    </div>
-                </article>
-
-                <article class=" border border-primary bg-white rounded-md my-5 sm:m-5 xl:w-72 lg:w-80 sm:w-72 ">
-                    <img src="https://picsum.photos/600/400?random=4" class="rounded-t-md w-full" alt="">
-                    <div class="p-5">
-                        <h1 class="text-2xl text-primary pt-3 font-light">Paesan</h1>
-                        <ul class="flex">
-                            <li
-                                class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
-                                Traditional
-                            </li>
-                            <li
-                                class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
-                                Home-Cooked
-                            </li>
-                        </ul>
-                        <p class="text-black text-opacity-50 pb-8 text-sm text-light">
-                            753 Lockhart Drive <br />
-                            Barrie, Ontario<br />
-                            Canada
-                        </p>
-                        <a href="./listing_category_item.html"
-                            class="border border-primary text-primary hover:border-secondary hover:text-secondary transition-all px-2 py-1 rounded-md">
-                            View Details
-                        </a>
-                    </div>
-                </article>
-                <article class=" border border-primary bg-white rounded-md my-5 sm:m-5 xl:w-72 lg:w-80 sm:w-72 ">
-                    <img src="https://picsum.photos/600/400?random=5" class="rounded-t-md w-full" alt="">
-                    <div class="p-5">
-                        <h1 class="text-2xl text-primary pt-3 font-light">Jago Foods</h1>
-                        <ul class="flex">
-                            <li
-                                class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
-                                European
-                            </li>
-                            <li
-                                class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
-                                Ashkenazi
-                            </li>
-
-                        </ul>
-                        <p class="text-black text-opacity-50 pb-8 text-sm text-light">
-                            1517 Halsey Avenue<br />
-                            Toronto, Ontario<br />
-                            Canada
-                        </p>
-                        <a href="./listing_category_item.html"
-                            class="border border-primary text-primary hover:border-secondary hover:text-secondary transition-all px-2 py-1 rounded-md">
-                            View Details
-                        </a>
-                    </div>
-                </article>
-
-                <article class=" border border-primary bg-white rounded-md my-5 sm:m-5 xl:w-72 lg:w-80 sm:w-72 ">
-                    <img src="https://picsum.photos/600/400?random=6" class="rounded-t-md w-full" alt="">
-                    <div class="p-5">
-                        <h1 class="text-2xl text-primary pt-3 font-light">Roberto's</h1>
-                        <ul class="flex">
-                            <li
-                                class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
-                                Hand-made
-                            </li>
-                            <li
-                                class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
-                                Rustic Pizza
-                            </li>
-
-                        </ul>
-                        <p class="text-black text-opacity-50 pb-8 text-sm text-light">
-                            S2532 Rainy Day Drive <br />
-                            Chelsea, MA<br />
-                            US
-                        </p>
-                        <a href="./listing_category_item.html"
-                            class="border border-primary text-primary hover:border-secondary hover:text-secondary transition-all px-2 py-1 rounded-md">
-                            View Details
-                        </a>
-                    </div>
-                </article>
-
-                <article class=" border border-primary bg-white rounded-md my-5 sm:m-5 xl:w-72 lg:w-80 sm:w-72 ">
-                    <img src="https://picsum.photos/600/400?random=7" class="rounded-t-md w-full" alt="">
-                    <div class="p-5">
-                        <h1 class="text-2xl text-primary pt-3 font-light">ACP Furniture</h1>
-                        <ul class="flex">
-                            <li
-                                class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
-                                Furniture
-                            </li>
-                            <li
-                                class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
-                                Home
-                            </li>
-                            <li
-                                class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
-                                Affordable
-                            </li>
-                        </ul>
-                        <p class="text-black text-opacity-50 pb-8 text-sm text-light">
-                            32 rue La Boétie <br />
-                            Paris, Federal<br />
-                            France
-                        </p>
-                        <a href="./listing_category_item.html"
-                            class="border border-primary text-primary hover:border-secondary hover:text-secondary transition-all px-2 py-1 rounded-md">
-                            View Details
-                        </a>
-                    </div>
-                </article>
-
-                <article class=" border border-primary bg-white rounded-md my-5 sm:m-5 xl:w-72 lg:w-80 sm:w-72 ">
-                    <img src="https://picsum.photos/600/400?random=8" class="rounded-t-md w-full" alt="">
-                    <div class="p-5">
-                        <h1 class="text-2xl text-primary pt-3 font-light">Paesan</h1>
-                        <ul class="flex">
-                            <li
-                                class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
-                                Traditional
-                            </li>
-                            <li
-                                class="bg-primary text-white py-1 px-2 my-2 mr-1 font-light rounded-sm uppercase text-sm">
-                                Home-Cooked
-                            </li>
-                        </ul>
-                        <p class="text-black text-opacity-50 pb-8 text-sm text-light">
-                            753 Lockhart Drive <br />
-                            Barrie, Ontario<br />
-                            Canada
-                        </p>
-                        <a href="./listing_category_item.html"
-                            class="border border-primary text-primary hover:border-secondary hover:text-secondary transition-all px-2 py-1 rounded-md">
-                            View Details
-                        </a>
-                    </div>
-                </article>
-            </main>
-
-            <footer class="px-20 py-5 w-full flex justify-center">
+            <!-- Map Section -->
+            <section id="categoryMapContent" class=" relative hidden lg:block w-full">
+                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1keM7N47SElrsJeAmpQqgCJB6x_FYHxI&ehbc=2E312F"
+                    class="h-full w-full lg:w-2/4 fixed top-0 z-0" style="border:0;" allowfullscreen loading="lazy">
+                </iframe>
                 <button
-                    class="bg-white border text-center flex justify-between items-center rounded-sm sm:py-2 py-1 px-2 w-full sm:w-auto">
-                    <span
-                        class="w-full text-center text-black  text-opacity-50 text-sm hover:text-primary hover:text-opacity-100 transition-all px-1">
-                        Load More Listings
-                    </span>
-                    <img src="./src/images/down-arrow.png" alt="down-arrow" class="opacity-50  h-3 w-3">
+                    class="lg:hidden absolute top-0 right-0 z-20 m-3 bg-white p-2 rounded-md border-gray-200 shadow-md">
+                    <img src="https://demos.pixelgrade.com/listable/wp-content/themes/listable/assets/svg/cards.svg"
+                        onclick="hideMap()" alt="menu-map" class="w-6 h-6">
                 </button>
-            </footer>
-        </section>
+            </section>
+        </main>
+    </section>
 
-        <!-- Map Section -->
-        <section id="categoryMapContent" class="h-full relative hidden lg:block w-full">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d36746.86162541586!2d-0.13652989180636974!3d51.51705339380679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2s!4v1660331981962!5m2!1sen!2s"
-                class="h-full w-full lg:w-2/4 fixed top-0 z-0" style="border:0;" allowfullscreen loading="lazy">
-            </iframe>
-            <button class="lg:hidden absolute top-0 right-0 z-20 m-3 bg-white p-2 rounded-md border-gray-200 shadow-md">
-                <img src="https://demos.pixelgrade.com/listable/wp-content/themes/listable/assets/svg/cards.svg"
-                    onclick="hideMap()" alt="menu-map" class="w-6 h-6">
-            </button>
-        </section>
 
-    </main>
+    <!-- Footer Section of Page -->
+    <section class="relative">
+        <footer class="bg-secondary-darker lg:sticky bottom-0 w-full">
+            <section class="flex justify-center p-6">
+                <img src="./src/images/facebook.svg" alt="facebook"
+                    class="p-1 border-2 border-white rounded-full mx-1 hover:opacity-50 transition-all cursor-pointer">
+                <img src="./src/images/youtube.svg" alt="youtube"
+                    class="p-1 border-2 border-white rounded-full mx-1 hover:opacity-50 transition-all cursor-pointer">
+                <img src="./src/images/twitter.svg" alt="twitter"
+                    class="p-1 border-2 border-white rounded-full mx-1 hover:opacity-50 transition-all cursor-pointer">
+                <img src="./src/images/pinterest.svg" alt="pinterest"
+                    class="p-1 border-2 border-white rounded-full mx-1 hover:opacity-50 transition-all cursor-pointer">
+                <img src="./src/images/vkontake.svg" alt="vkontatke"
+                    class="p-1 border-2 border-white rounded-full mx-1 hover:opacity-50 transition-all cursor-pointer">
+                <img src="./src/images/instagram.svg" alt="instagram"
+                    class="p-1 border-2 border-white rounded-full mx-1 hover:opacity-50 transition-all cursor-pointer">
+            </section>
+            <section
+                class="bg-secondary-darker border-t border-t-secondary-darkest px-6 py-3 sm:px-0 sm:pt-6 sm:pb-9 lg:px-6 flex sm:flex-row flex-col sm:justify-evenly sm:items-center text-white text-opacity-75 text-sm lg:text-base">
+                <ul class="my-3 sm:my-0">
+                    <li
+                        class="uppercase font-semibold text-white text-opacity-100 my-2 text-sm tracking-wide lg:text-base lg:tracking-wider">
+                        Categories
+                    </li>
+                    <li
+                        class="-my-1.5 transition-all cursor-pointer hover:underline hover:text-white hover:text-opacity-100">
+                        Lorem</li>
+                    <li
+                        class="-my-1.5 transition-all cursor-pointer hover:underline hover:text-white hover:text-opacity-100">
+                        Dolor</li>
+                    <li
+                        class="-my-1.5 transition-all cursor-pointer hover:underline hover:text-white hover:text-opacity-100">
+                        Sit</li>
+                    <li
+                        class="-my-1.5 transition-all cursor-pointer hover:underline hover:text-white hover:text-opacity-100">
+                        Amet</li>
+                </ul>
+                <ul class="my-3 sm:my-0">
+                    <li
+                        class="uppercase font-semibold text-white text-opacity-100 my-2 text-sm tracking-wide lg:text-base lg:tracking-wider">
+                        information</li>
+                    <li
+                        class="-my-1.5 transition-all cursor-pointer hover:underline hover:text-white hover:text-opacity-100">
+                        Lorem</li>
+                    <li
+                        class="-my-1.5 transition-all cursor-pointer hover:underline hover:text-white hover:text-opacity-100">
+                        Dolor</li>
+                    <li
+                        class="-my-1.5 transition-all cursor-pointer hover:underline hover:text-white hover:text-opacity-100">
+                        Sit</li>
+                    <li
+                        class="-my-1.5 transition-all cursor-pointer hover:underline hover:text-white hover:text-opacity-100">
+                        Amet</li>
+                </ul>
+                <ul class="my-3 sm:my-0">
+                    <li
+                        class="uppercase font-semibold text-white text-opacity-100 my-2 text-sm tracking-wide lg:text-base lg:tracking-wider">
+                        Near You
+                    </li>
+                    <li
+                        class="-my-1.5 transition-all cursor-pointer hover:underline hover:text-white hover:text-opacity-100">
+                        Lorem</li>
+                    <li
+                        class="-my-1.5 transition-all cursor-pointer hover:underline hover:text-white hover:text-opacity-100">
+                        Dolor</li>
+                    <li
+                        class="-my-1.5 transition-all cursor-pointer hover:underline hover:text-white hover:text-opacity-100">
+                        Sit</li>
+                    <li
+                        class="-my-1.5 transition-all cursor-pointer hover:underline hover:text-white hover:text-opacity-100">
+                        Amet</li>
+                </ul>
+            </section>
+            <section class="text-center bg-secondary-darkest text-white text-opacity-60 text-sm font-thin p-10 ">
+                <p>Copyright © 2019 Company Inc. • Address • Tel: 42-898-4363 • Contact</p>
+            </section>
+        </footer>
+    </section>
 
     <script src="./src/js/index.js"></script>
 </body>
