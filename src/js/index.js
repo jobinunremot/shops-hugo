@@ -197,10 +197,9 @@ function initialise() {
 
     // create array containing locations
     var locations = [
-        ['Coogee Beach', 34.1520123, , -118.3478165]
-        , ['Cronulla Beach', 34.1563689, -118.33498327],
         ['Bondi Beach', 34.1455215, -118.3642243]
-        ,
+        , ['Coogee Beach', 34.1520123, , -118.3478165]
+        , ['Cronulla Beach', 34.1563689, -118.33498327]
     ];
 
     // loop through locations and add to map
@@ -217,7 +216,7 @@ function initialise() {
         // create marker (https://developers.google.com/maps/documentation/javascript/reference#MarkerOptions)
         var marker = new google.maps.Marker({
             animation: google.maps.Animation.DROP
-            , icon: "http://www.google.com/intl/en_us/mapfiles/ms/micons/red-dot.png"
+            , icon: "http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png"
             , map: map
             , position: position
             , title: location[0]
