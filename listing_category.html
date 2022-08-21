@@ -10,7 +10,7 @@
     <title>Category</title>
 </head>
 
-<body class="relative h-full" onload="loadScript()">
+<body class="relative h-full" onload="initialise()">
     <header class="sticky top-0 z-50 bg-white">
 
         <!-- Navbar -->
@@ -955,7 +955,8 @@
         </footer>
     </section>
 
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript"
+        src="http://maps.googleapis.com/maps/api/js?sensor=false&callback=initialise"></script>
     <script src="./src/js/index.js"></script>
 </body>
 

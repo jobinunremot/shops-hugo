@@ -241,13 +241,6 @@ function initialise() {
     map.fitBounds(bounds);
 }
 
-// load map after page has finished loading
-function loadScript() {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "http://maps.googleapis.com/maps/api/js?sensor=false&callback=initialise"; // initialize method called using callback parameter
-    document.body.appendChild(script);
-}
 
 // PinPoints for a single location        
 function loadMap() {
@@ -266,9 +259,3 @@ function loadMap() {
         map: map,
     });
 }
-
-
-window.onload = function () {
-    loadScript();
-    loadMap();
-};
