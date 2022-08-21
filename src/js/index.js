@@ -186,7 +186,7 @@ function initialise() {
     // create object literal to store map properties
     var myOptions = {
         zoom: 18 // set zoom level
-        , mapTypeId: google.maps.MapTypeId.HYBRID // apply tile (options include ROADMAP, SATELLITE, HYBRID and TERRAIN)
+        , mapTypeId: google.maps.MapTypeId.ROADMAP // apply tile (options include ROADMAP, SATELLITE, HYBRID and TERRAIN)
     };
 
     // create map object and apply properties
@@ -252,7 +252,8 @@ function loadMap() {
 
     var mapOptions = {
         center: new google.maps.LatLng(39.1978348, -94.5399957),
-        zoom: 10
+        zoom: 10,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
     var map = new google.maps.Map(document.getElementById("sample"), mapOptions);
