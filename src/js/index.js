@@ -183,6 +183,11 @@ function ratingUpdate(ratingIndex) {
 //PinPoints on Map
 // PinPoints for multiple locations 
 function initialise() {
+    // create map object and apply properties
+    var map = new google.maps.Map(document.getElementById("multipointsMap"), myOptions);
+    if (map === null) {
+        return;
+    }
     // create object literal to store map properties
     var myOptions = {
         center: new google.maps.LatLng(34.1455215, -118.3642243),//Add the central point of the map
@@ -190,11 +195,6 @@ function initialise() {
         mapTypeId: google.maps.MapTypeId.ROADMAP // apply tile (options include ROADMAP, SATELLITE, HYBRID and TERRAIN)
     };
 
-    // create map object and apply properties
-    var map = new google.maps.Map(document.getElementById("multipointsMap"), myOptions);
-    if (map === null) {
-        return;
-    }
     // create map bounds object
     var bounds = new google.maps.LatLngBounds();
 
