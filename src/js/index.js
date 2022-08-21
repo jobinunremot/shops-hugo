@@ -185,21 +185,24 @@ function ratingUpdate(ratingIndex) {
 function initialise() {
     // create object literal to store map properties
     var myOptions = {
-        zoom: 18 // set zoom level
-        , mapTypeId: google.maps.MapTypeId.ROADMAP // apply tile (options include ROADMAP, SATELLITE, HYBRID and TERRAIN)
+        center: new google.maps.LatLng(34.1455215, -118.3642243),//Add the central point of the map
+        zoom: 12, // set zoom level
+        mapTypeId: google.maps.MapTypeId.ROADMAP // apply tile (options include ROADMAP, SATELLITE, HYBRID and TERRAIN)
     };
 
     // create map object and apply properties
     var map = new google.maps.Map(document.getElementById("multipointsMap"), myOptions);
-
+    if (map === null) {
+        return;
+    }
     // create map bounds object
     var bounds = new google.maps.LatLngBounds();
 
     // create array containing locations
     var locations = [
-        ['Bondi Beach', 34.1455215, -118.3642243]
-        , ['Coogee Beach', 34.1520123, , -118.3478165]
-        , ['Cronulla Beach', 34.1563689, -118.33498327]
+        ['Place 1', 34.1455215, -118.3642243],
+        ['Place 2', 34.1455215, , -118.3642213],
+        ['Place 3', 34.1563689, -118.33498327]
     ];
 
     // loop through locations and add to map
@@ -216,7 +219,7 @@ function initialise() {
         // create marker (https://developers.google.com/maps/documentation/javascript/reference#MarkerOptions)
         var marker = new google.maps.Marker({
             animation: google.maps.Animation.DROP
-            , icon: "http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png"
+            , icon: "http://www.google.com/intl/en_us/mapfiles/ms/micons/red-dot.png"
             , map: map
             , position: position
             , title: location[0]
@@ -245,21 +248,27 @@ function loadScript() {
     script.src = "http://maps.googleapis.com/maps/api/js?sensor=false&callback=initialise"; // initialize method called using callback parameter
     document.body.appendChild(script);
 }
-window.onload = loadScript;
 
-// PinPoints for a single location
+// PinPoints for a single location        
 function loadMap() {
-
     var mapOptions = {
-        center: new google.maps.LatLng(39.1978348, -94.5399957),
+        center: new google.maps.LatLng(34.178630, -118.343878),
         zoom: 10,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
-    var map = new google.maps.Map(document.getElementById("sample"), mapOptions);
-
+    var map = new google.maps.Map(document.getElementById("singlePinPoint"), mapOptions);
+    if (map === null) {
+        return;
+    }
     var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(17.088291, 78.442383),
+        position: new google.maps.LatLng(34.1455215, -118.3642243),
         map: map,
     });
 }
+
+
+window.onload = function () {
+    loadScript();
+    loadMap();
+};
