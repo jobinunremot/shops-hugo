@@ -91,28 +91,62 @@
   display: none;
 }
 
-/* Carousel Styling */
-.carousel-cell img {
-  height: 450px;
-  width: 600px;
-  margin-right: 0.25rem;
+/* Carousel Slider */
+.slider {
+  position: relative;
+  overflow: hidden;
 }
 
-/* icon color */
-.arrow {
-  fill: #ff4d55;
-}
-.flickity-button {
-  background: white !important;
+.slider-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
 }
 
-.flickity-prev-next-button {
-  width: 30px;
-  height: 30px;
-  border-radius: 5px;
-}
-
-/* hide disabled button */
-.flickity-button:disabled {
+.slider-container::-webkit-scrollbar {
   display: none;
+}
+
+.slider-card {
+  flex: 0 0 auto;
+}
+
+.slider-image-container {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.slider-image {
+  object-fit: cover;
+}
+
+.pre-btn,
+.nxt-btn {
+  border: none;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 0.2rem; */
+  z-index: 9;
+  cursor: pointer;
+}
+.pre-btn img,
+.nxt-btn img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 100%;
+}
+
+.pre-btn {
+  left: 0;
+  transform: rotate(180deg);
+}
+.nxt-btn {
+  right: 0;
 }

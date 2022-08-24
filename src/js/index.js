@@ -259,3 +259,52 @@ function loadMap() {
         map: map,
     });
 }
+
+
+// Carousel Slider
+const sliderContainer = [...document.querySelectorAll('.slider-container')];
+const nextButton = [...document.querySelectorAll('.nxt-btn')];
+const prevButton = [...document.querySelectorAll('.pre-btn')];
+
+sliderContainer.forEach((item, i) => {
+    let containerDimensions = item.getBoundingClientRect();
+    let containerWidth = containerDimensions.width;
+
+    nextButton[i].addEventListener('click', () => {
+        item.scrollLeft += containerWidth;
+    });
+
+    prevButton[i].addEventListener('click', () => {
+        item.scrollLeft -= containerWidth;
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
