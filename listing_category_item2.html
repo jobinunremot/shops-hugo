@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link href="./dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="./src/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Roberto</title>
+</head>
+
+<body class="relative" onload="loadMap()">
+    <header class="sticky top-0 z-50 bg-white">
+
+        <!-- Navbar -->
+        <nav class="relative flex items-center w-full justify-between border shadow-sm">
+
+            <!-- Mobile Nav Links -->
+            <img onclick="showNavMenu()" src="./src/images/hamburger-dark.svg" alt="hamburger menu"
+                class="lg:hidden px-4 py-1" id="hamburgerBtn">
+            <ul id="hamburgerMenuList"
+                class="top-0 fixed h-screen w-4/5 bg-white p-0 z-50 border-r lg:border-0 border-gray-200 shadow-md -left-full transition-all">
+                <li class="text-secondary text-left border-b" onclick="hideNavMenu()">
+                    <img src="./src/images/cross.png" alt="cross" class="z-50">
+                </li>
+                <li onclick="showExploreList()"
+                    class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-secondary text-left flex items-center justify-between">
+                    <span class="w-full">
+                        Explore
+                    </span>
+                    <span class="w-px h-full bg-black bg-opacity-10 mx-4">
+                    </span>
+                    <img src="./src/images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
+                </li>
+
+                <!-- Additional Explore List Start -->
+                <ul class="invisible  bg-stone-50 transition-all" id="exploreList">
+                    <li
+                        class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-secondary text-left flex items-center justify-between">
+                        <span class="w-full">
+                            Food
+                        </span>
+                        <span class="w-px h-full bg-black bg-opacity-10 mx-4">
+                        </span>
+                        <img src="./src/images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
+                    </li>
+                    <li
+                        class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-secondary text-left flex items-center justify-between">
+                        <span class="w-full">
+                            Entertainment
+                        </span>
+                        <span class="w-px h-full bg-black bg-opacity-10 mx-4">
+                        </span>
+                        <img src="./src/images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
+                    </li>
+                    <li
+                        class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-secondary text-left flex items-center justify-between">
+                        <span class="w-full">
+                            Lodging
+                        </span>
+                        <span class="w-px h-full bg-black bg-opacity-10 mx-4">
+                        </span>
+                        <img src="./src/images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
+                    </li>
+                    <li
+                        class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-secondary text-left flex items-center justify-between">
+                        <span class="w-full">
+                            Nightlife
+                        </span>
+                        <span class="w-px h-full bg-black bg-opacity-10 mx-4">
+                        </span>
+                        <img src="./src/images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
+                    </li>
+                    <li
+                        class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-secondary text-left flex items-center justify-between">
+                        <span class="w-full">
+                            Outdoors
+                        </span>
+                        <span class="w-px h-full bg-black bg-opacity-10 mx-4">
+                        </span>
+                        <img src="./src/images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
+                    </li>
+                    <li
+                        class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-secondary text-left flex items-center justify-between">
+                        <span class="w-full">
+                            Shops
+                        </span>
+                        <span class="w-px h-full bg-black bg-opacity-10 mx-4">
+                        </span>
+                        <img src="./src/images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
+                    </li>
+                </ul>
+                <!-- Additional Explore List End ^-->
+
+                <li onclick="showHelpList()"
+                    class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-secondary text-left flex items-center justify-between">
+                    <span class="w-full">
+                        Help
+                    </span>
+                    <span class="w-px h-full bg-black bg-opacity-10 mx-4">
+                    </span>
+                    <img src="./src/images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75">
+                </li>
+
+                <!-- Additional Help List Start -->
+                <ul class="invisible bg-stone-50 transition-all" id="helpList">
+                    <li
+                        class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-secondary text-left flex items-center">
+                        How it works
+                    </li>
+                    <li
+                        class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-secondary text-left flex items-center">
+                        Special Offers
+                    </li>
+                    <li
+                        class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-secondary text-left flex items-center">
+                        Listing(No Maps)
+                    </li>
+                    <li
+                        class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-secondary text-left flex items-center">
+                        Advanced Filters(Demo)
+                    </li>
+                </ul>
+                <!-- Additional Help List End -->
+
+                <li
+                    class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-secondary text-left flex items-center">
+                    Blog
+                </li>
+                <li
+                    class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-secondary text-left flex items-center">
+                    Log In
+                </li>
+                <li
+                    class="border-b px-4 h-12 font-light text-opacity-60 active:text-primary  text-secondary text-left flex items-center">
+                    Add Listing
+                </li>
+            </ul>
+
+            <!-- Logo -->
+            <span style="border-top: 0; border-bottom:0;"
+                class="h-full flex  items-center w-full justify-center lg:justify-start border lg:border-0  border-gray-200 p-2 ">
+                <a href="./index.html">
+                    <img class="h-8 lg:pl-4 pr-8" src="./src/images/Logo-dark.svg" alt="Logo">
+                </a>
+                <!-- Desktop Search Input Box and SearchList -->
+                <span class="relative hidden lg:block w-80 px-4  border-l ">
+                    <span id="searchInputContainer2"
+                        onclick="document.getElementById('searchInputField2').focus(); return false;"
+                        class="lg:mx-0 p-2 bg-white rounded-md  flex justify-between items-center">
+                        <input id="searchInputField2" class="w-full outline-none text-secondary text-opacity-50"
+                            type="text" placeholder="What are you looking for?" onFocus="showSearchList2()"
+                            onblur="hideSearchList2()">
+                        <img src="./src/images/search-dark.svg" alt="down" class="h-4 opacity-50 mx-4">
+                    </span>
+                    <ul class="invisible absolute w-full py-4" id="searchList2">
+                        <li
+                            class="border-t border-b flex bg-white text-secondary items-center w-full p-3 lg:py-6 hover:text-primary transition-all cursor-pointer">
+                            <img class=""
+                                src="https://demos.pixelgrade.com/listable/wp-content/uploads/sites/17/2015/11/menu-map.svg"
+                                alt="">
+                            <h5 class="font-light text-xs lg:text-sm px-2">City Of London</h5>
+                            <p class="text-secondary text-opacity-50 text-xs lg:text-sm font-light ">Region</p>
+                        </li>
+                        <li
+                            class="border-b flex bg-white text-secondary items-center w-full p-3 lg:py-4 hover:text-primary transition-all cursor-pointer">
+                            <img class=""
+                                src="https://demos.pixelgrade.com/listable/wp-content/uploads/sites/17/2015/11/menu-map.svg"
+                                alt="">
+                            <h5 class="font-light text-xs lg:text-sm px-2">City of Westminster</h5>
+                            <p class="text-secondary text-opacity-50 text-xs lg:text-sm font-light ">Region</p>
+                        </li>
+                        <li
+                            class="border-b flex bg-white text-secondary items-center w-full p-3 lg:py-4 hover:text-primary transition-all cursor-pointer">
+                            <img class=""
+                                src="https://demos.pixelgrade.com/listable/wp-content/uploads/sites/17/2015/11/menu-map.svg"
+                                alt="">
+                            <h5 class="font-light text-xs lg:text-sm px-2">Chelsea District</h5>
+                            <p class="text-secondary text-opacity-50 text-xs lg:text-sm font-light ">Region</p>
+                        </li>
+                        <li
+                            class="border-b flex bg-white text-secondary items-center w-full p-3 lg:py-4 hover:text-primary transition-all cursor-pointer">
+                            <img class=""
+                                src="https://demos.pixelgrade.com/listable/wp-content/uploads/sites/17/2015/11/menu-top-picks.svg"
+                                alt="">
+                            <h5 class="font-light text-xs lg:text-sm px-2">Top Picks</h5>
+                            <p class="text-secondary text-opacity-50 text-xs lg:text-sm font-light ">Featured List</p>
+                        </li>
+                        <li
+                            class="border-b flex bg-white text-secondary items-center w-full p-3 lg:py-4 hover:text-primary transition-all cursor-pointer">
+                            <img class=""
+                                src="https://demos.pixelgrade.com/listable/wp-content/uploads/sites/17/2015/11/menu-shopping.svg"
+                                alt="">
+                            <h5 class="font-light text-xs lg:text-sm px-2">Shopping</h5>
+                            <p class="text-secondary text-opacity-50 text-xs lg:text-sm font-light ">Category</p>
+                        </li>
+                        <li
+                            class="border-b flex bg-white text-secondary items-center w-full p-3 lg:py-4 hover:text-primary transition-all cursor-pointer">
+                            <img class=""
+                                src="	https://demos.pixelgrade.com/listable/wp-content/uploads/sites/17/2015/11/menu-food.svg"
+                                alt="">
+                            <h5 class="font-light text-xs lg:text-sm px-2">Local Food</h5>
+                            <p class="text-secondary text-opacity-50 text-xs lg:text-sm font-light ">Category</p>
+                        </li>
+                    </ul>
+                </span>
+
+            </span>
+
+            <!-- Mobile Search Box -->
+            <img class="h-8 px-4 py-1 relative lg:hidden" onclick="showNavSearchInput()"
+                src="./src/images/search-dark.svg" alt="search">
+            <div id="navSearchInput"
+                class=" absolute  z-50 flex flex-col w-full -top-full invisible transition-all  h-full">
+                <span class="flex justify-between ">
+                    <input type="text" class="w-full border-gray-200 h-full px-4"
+                        placeholder="What Are You Looking For">
+                    <img class="w-1/5 z-50 bg-white  border border-white" style="border-left-color: #E5E7EB;"
+                        src="./src/images/cross.png" onclick="hideNavSearchInput()" alt="cross">
+                </span>
+                <ul class="w-full flex-1 " id="searchList">
+                    <li
+                        class="border-t border-b flex bg-white text-secondary items-center w-full p-3 lg:py-4 hover:text-primary transition-all cursor-pointer">
+                        <img class=""
+                            src="https://demos.pixelgrade.com/listable/wp-content/uploads/sites/17/2015/11/menu-map.svg"
+                            alt="">
+                        <h5 class="font-light text-xs lg:text-sm px-2">City Of London</h5>
+                        <p class="text-secondary text-opacity-50 text-xs lg:text-sm font-light ">Region</p>
+                    </li>
+                    <li
+                        class="border-b flex bg-white text-secondary items-center w-full p-3 lg:py-4 hover:text-primary transition-all cursor-pointer">
+                        <img class=""
+                            src="https://demos.pixelgrade.com/listable/wp-content/uploads/sites/17/2015/11/menu-map.svg"
+                            alt="">
+                        <h5 class="font-light text-xs lg:text-sm px-2">City of Westminster</h5>
+                        <p class="text-secondary text-opacity-50 text-xs lg:text-sm font-light ">Region</p>
+                    </li>
+                    <li
+                        class="border-b flex bg-white text-secondary items-center w-full p-3 lg:py-4 hover:text-primary transition-all cursor-pointer">
+                        <img class=""
+                            src="https://demos.pixelgrade.com/listable/wp-content/uploads/sites/17/2015/11/menu-map.svg"
+                            alt="">
+                        <h5 class="font-light text-xs lg:text-sm px-2">Chelsea District</h5>
+                        <p class="text-secondary text-opacity-50 text-xs lg:text-sm font-light ">Region</p>
+                    </li>
+                    <li
+                        class="border-b flex bg-white text-secondary items-center w-full p-3 lg:py-4 hover:text-primary transition-all cursor-pointer">
+                        <img class=""
+                            src="https://demos.pixelgrade.com/listable/wp-content/uploads/sites/17/2015/11/menu-top-picks.svg"
+                            alt="">
+                        <h5 class="font-light text-xs lg:text-sm px-2">Top Picks</h5>
+                        <p class="text-secondary text-opacity-50 text-xs lg:text-sm font-light ">Featured List</p>
+                    </li>
+                    <li
+                        class="border-b flex bg-white text-secondary items-center w-full p-3 lg:py-4 hover:text-primary transition-all cursor-pointer">
+                        <img class=""
+                            src="https://demos.pixelgrade.com/listable/wp-content/uploads/sites/17/2015/11/menu-shopping.svg"
+                            alt="">
+                        <h5 class="font-light text-xs lg:text-sm px-2">Shopping</h5>
+                        <p class="text-secondary text-opacity-50 text-xs lg:text-sm font-light ">Category</p>
+                    </li>
+                    <li
+                        class="border-b flex bg-white text-secondary items-center w-full p-3 lg:py-4 hover:text-primary transition-all cursor-pointer">
+                        <img class=""
+                            src="	https://demos.pixelgrade.com/listable/wp-content/uploads/sites/17/2015/11/menu-food.svg"
+                            alt="">
+                        <h5 class="font-light text-xs lg:text-sm px-2">Local Food</h5>
+                        <p class="text-secondary text-opacity-50 text-xs lg:text-sm font-light ">Category</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Desktop Nav Links -->
+            <ul
+                class="hidden lg:flex justify-around items-center whitespace-nowrap px-3 font-light lg:justify-center cursor-pointer text-secondary text-opacity-50 h-full">
+                <li class="flex hover:text-primary transition-all  items-center py-6 px-6 relative explore-dropdown ">
+                    Explore
+                    <img src="./src/images/down-arrow.png" alt="down" class=" mx-2 h-2 opacity-50">
+
+                    <ul
+                        class="hidden absolute top-full -left-1/4 text-start text-sm font-light bg-white text-secondary z-50 explore-dropdown-content py-4 border ">
+                        <li class="px-4 py-2 text-secondary text-opacity-50 w-40 transition-all   whitespace-nowrap">
+                            All List
+                        </li>
+                        <li
+                            class="flex justify-between px-4 py-2 text-secondary text-opacity-50 w-40 hover:text-primary hover:text-opacity-100 transition-all cursor-pointer  whitespace-nowrap dropdown">
+                            <span class="w-full">
+                                Food
+                            </span>
+                            <img src="./src/images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75 -rotate-90">
+                            <ul
+                                class="hidden absolute left-full text-start text-sm font-light  p-3 bg-white text-secondary z-50 dropdown-content shadow-md border-1">
+                                <li
+                                    class="px-4 py-2 text-secondary text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                    Cafe
+                                </li>
+                                <li
+                                    class="px-4 py-2 text-secondary text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                    Pizza Place
+                                </li>
+                                <li
+                                    class="px-4 py-2 text-secondary text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                    Restaurant
+                                </li>
+                                <li
+                                    class="px-4 py-2 text-secondary text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                    Winery
+                                </li>
+                            </ul>
+
+                        </li>
+                        <li
+                            class="flex justify-between px-4 py-2 text-secondary text-opacity-50 w-40 hover:text-primary hover:text-opacity-100 transition-all cursor-pointer  whitespace-nowrap dropdown">
+
+                            <span class="w-full">
+                                Entertainment
+                            </span>
+                            <img src="./src/images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75 -rotate-90">
+
+                            <ul
+                                class="hidden absolute left-full text-start text-sm font-light  p-3 bg-white text-secondary z-50 dropdown-content shadow-md border-1">
+                                <li
+                                    class="px-4 py-2 text-secondary text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                    Art Gallery
+                                </li>
+                                <li
+                                    class="px-4 py-2 text-secondary text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                    Movie Theatre
+                                </li>
+                                <li
+                                    class="px-4 py-2 text-secondary text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                    Museum
+                                </li>
+                                <li
+                                    class="px-4 py-2 text-secondary text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                    Stadium
+                                </li>
+                            </ul>
+                        </li>
+                        <li
+                            class="flex justify-between px-4 py-2 text-secondary text-opacity-50 w-40 hover:text-primary hover:text-opacity-100 transition-all cursor-pointer  whitespace-nowrap dropdown">
+
+                            <span class="w-full">
+                                Lodging
+                            </span>
+                            <img src="./src/images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75 -rotate-90">
+
+                            <ul
+                                class="hidden absolute left-full text-start text-sm font-light  p-3 bg-white text-secondary z-50 dropdown-content shadow-md border-1">
+                                <li
+                                    class="px-4 py-2 text-secondary text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                    Hotel
+                                </li>
+                                <li
+                                    class="px-4 py-2 text-secondary text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                    Apartment
+                                </li>
+                            </ul>
+                        </li>
+                        <li
+                            class="flex justify-between px-4 py-2 text-secondary text-opacity-50 w-40 hover:text-primary hover:text-opacity-100 transition-all cursor-pointer  whitespace-nowrap dropdown">
+
+                            <span class="w-full">
+                                Nightlife
+                            </span>
+                            <img src="./src/images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75 -rotate-90">
+
+                            <ul
+                                class="hidden absolute left-full text-start text-sm font-light  p-3 bg-white text-secondary z-50 dropdown-content shadow-md border-1">
+                                <li
+                                    class="px-4 py-2 text-secondary text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                    Bar
+                                </li>
+                                <li
+                                    class="px-4 py-2 text-secondary text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                    Brewery
+                                </li>
+                                <li
+                                    class="px-4 py-2 text-secondary text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                    Lounge
+                                </li>
+                            </ul>
+                        </li>
+                        <li
+                            class="flex justify-between px-4 py-2 text-secondary text-opacity-50 w-40 hover:text-primary hover:text-opacity-100 transition-all cursor-pointer  whitespace-nowrap dropdown">
+
+                            <span class="w-full">
+                                Outdoors
+                            </span>
+                            <img src="./src/images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75 -rotate-90">
+
+                            <ul
+                                class="hidden absolute left-full text-start text-sm font-light  p-3 bg-white text-secondary z-50 dropdown-content shadow-md border-1">
+                                <li
+                                    class="px-4 py-2 text-secondary text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                    Park
+                                </li>
+                                <li
+                                    class="px-4 py-2 text-secondary text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                    Bridge
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li
+                            class="flex justify-between px-4 py-2 text-secondary text-opacity-50 w-40 hover:text-primary hover:text-opacity-100 transition-all cursor-pointer  whitespace-nowrap dropdown">
+
+                            <span class="w-full">
+                                Shops
+                            </span>
+                            <img src="./src/images/down-arrow.png" alt="down-arrow" class="h-3 opacity-75 -rotate-90">
+
+                            <ul
+                                class="hidden absolute left-full text-start text-sm font-light  p-3 bg-white text-secondary z-50 dropdown-content shadow-md border-1">
+                                <li
+                                    class="px-4 py-2 text-secondary text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                    Bank
+                                </li>
+                                <li
+                                    class="px-4 py-2 text-secondary text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                                    Furniture/Home
+                                </li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <span class="w-px h-8 bg-gray-200"></span>
+                <li class="flex hover:text-primary transition-all  items-center py-3 px-6 relative help-dropdown">
+                    Help
+                    <img src="./src/images/down-arrow.png" alt="down" class=" mx-2 h-2 opacity-50">
+                    <ul
+                        class="hidden absolute top-full -left-2/4 text-start text-sm font-light  p-3 bg-white text-secondary z-50 help-dropdown-content py-4 border ">
+                        <li
+                            class="px-4 py-2 text-secondary text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                            How It Works</li>
+                        <li
+                            class="px-4 py-2 text-secondary text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                            Special Offers</li>
+                        <li
+                            class="px-4 py-2 text-secondary text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                            Listing(No Map)</li>
+                        <li
+                            class="px-4 py-2 text-secondary text-opacity-50  hover:text-primary hover:text-opacity-100 transition-all cursor-pointer w-full whitespace-nowrap">
+                            Advanced Filters(Demo)</li>
+                    </ul>
+                </li>
+                <span class="w-px h-8 bg-gray-200"></span>
+                <li class="flex hover:text-primary transition-all  items-center py-1 px-6">Blog</li>
+                <span class="w-px h-8 bg-gray-200"></span>
+                <li class="flex hover:text-primary transition-all  items-center py-1 px-6">
+                    Log In
+                </li>
+                <li class="flex pr-6 transition-all items-center ">
+                    <Button
+                        class="bg-white bg-opacity-10 py-1 px-6 rounded-md border-opacity-50 shadow-sm border-gray-200 border hover:shadow-md hover:border-opacity-95 transition-all flex items-center hover:text-primary ">Add
+                        Listing
+                        <img src="./src/images/down-arrow.png" alt="down" class="opacity-50 mx-2 h-2 -rotate-90">
+                    </Button>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- Main Content Of Page -->
+    <main class="bg-stone-50  pb-6">
+
+        <header class="">
+
+            <!-- Carousel -->
+            <section class="slider">
+                <button class="pre-btn">
+                    <img src="./src/images/next-arrow.png" alt="prev" srcset="">
+                </button>
+                <button class="nxt-btn">
+                    <img src="./src/images/next-arrow.png" alt="next" srcset="">
+                </button>
+                <div class="slider-container">
+                    <div class="slider-card">
+                        <div class="slider-image-container lg:w-full lg:h-full sm:h-3/4 sm:w-3/4">
+                            <img src="https://picsum.photos/600/450?random=0" alt="" class="slider-image">
+                        </div>
+                    </div>
+                    <div class="slider-card">
+                        <div class="slider-image-container lg:w-full lg:h-full sm:h-3/4 sm:w-3/4">
+                            <img src="https://picsum.photos/600/450?random=1" alt="" class="slider-image">
+                        </div>
+                    </div>
+                    <div class="slider-card">
+                        <div class="slider-image-container lg:w-full lg:h-full sm:h-3/4 sm:w-3/4">
+                            <img src="https://picsum.photos/600/450?random=2" alt="" class="slider-image">
+                        </div>
+                    </div>
+                    <div class="slider-card">
+                        <div class="slider-image-container lg:w-full lg:h-full sm:h-3/4 sm:w-3/4">
+                            <img src="https://picsum.photos/600/450?random=3" alt="" class="slider-image">
+                        </div>
+                    </div>
+                    <div class="slider-card">
+                        <div class="slider-image-container lg:w-full lg:h-full sm:h-3/4 sm:w-3/4">
+                            <img src="https://picsum.photos/600/450?random=4" alt="" class="slider-image">
+                        </div>
+                    </div>
+                    <div class="slider-card">
+                        <div class="slider-image-container lg:w-full lg:h-full sm:h-3/4 sm:w-3/4">
+                            <img src="https://picsum.photos/600/450?random=5" alt="" class="slider-image">
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <div class="lg:flex p-5 lg:pt-10 lg:pb-5 lg:px-36 xl:px-48">
+                <div class="lg:w-2/3 lg:px-1 lg:mx-10">
+                    <!-- p-5 lg:py-10 lg:px-36 xl:px-48 -->
+                    <div class="">
+                        <p class="text-secondary text-opacity-50  text-sm lg:text-base font-light flex items-center">
+                            Listings
+                            <span class="opacity-50 flex relative ml-1 mr-2">
+                                <img src="./src/images/forward.png" class="w-4 h-4   opacity-75" alt="forward">
+                                <img src="./src/images/forward.png" class="w-4 h-4  absolute left-1 opacity-75"
+                                    alt="forward">
+                            </span>
+                            Food
+                            <span class="opacity-50 flex relative mx-1">
+                                <img src="./src/images/forward.png" class="w-4 h-4   opacity-75" alt="forward">
+                                <img src="./src/images/forward.png" class="w-4 h-4  absolute left-1 opacity-75"
+                                    alt="forward">
+                            </span>
+                            <span class="text-opacity-100 text-secondary font-normal">
+                                Pizza Place
+                            </span>
+                        </p>
+                        <h1 class="text-2xl lg:text-5xl text-primary pt-3 font-light flex items-center">
+                            Roberto's
+                            <img src="./src/images/verified.svg" class="mx-4 h-8 w-8" alt="verified">
+                        </h1>
+                        <ul class="flex">
+                            <li
+                                class="bg-primary text-white py-1 px-2 my-2 mr-3 lg:mr-6 font-light rounded-sm uppercase text-xs lg:text-sm ">
+                                European
+                            </li>
+                            <li
+                                class="bg-primary text-white py-1 px-2 my-2 mr-3 lg:mr-6 font-light rounded-sm uppercase text-xs lg:text-sm ">
+                                Ashkenazi
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-md text-secondary my-6">
+                        A short stroll from Hampstead Heath, Pizza East Roberto’s serves rustic pizzas made from
+                        traditional,
+                        seasonal ingredients with ciabatta-style, slow-proved dough, hand-made in-house every day. The
+                        menu
+                        also
+                        offers wood oven-cooked dishes, antipasti and daily specials. The bar area is a popular
+                        destination
+                        for
+                        after-hours cocktails, beer or wine.
+                    </div>
+                </div>
+
+                <aside class="lg:w-4/12">
+                    <section class="bg-white p-5 my-5 rounded-sm">
+                        <h3 class="uppercase text-2xl my-2 text-secondary text-opacity-80 text-light">
+                            Contact
+                        </h3>
+
+                        <div id="singlePinPoint" class="w-full h-40"></div>
+                        <p class="my-2">
+                            35 Springfield Road <br />
+                            London, <br />
+                            UK
+                        </p>
+                        <p class="flex items-center py-2 text-secondary text-opacity-80">
+                            <img class="h-6 w-6 ml-1 mr-2" src="./src/images/location.png" alt="location">
+                            Get Directions
+                        </p>
+                        <p class="flex items-center py-2 text-secondary text-opacity-80">
+                            <img class="h-6 w-6 ml-1 mr-2" src="./src/images/phone.png" alt="phone">
+                            +420 608 730 646
+                        </p>
+                        <p class="flex items-center py-2 text-secondary text-opacity-80">
+                            <img class="h-6 w-6 ml-1 mr-2" src="./src/images/mail.png" alt="mail">
+                            roberto@mail.com
+                        </p>
+                        <p class="flex items-center py-2 text-secondary text-opacity-80">
+                            <img class="h-6 w-6 ml-1 mr-2" src="./src/images/facebook-colored.svg"
+                                alt="facebook-colored">
+                            Visit Roberto's Facebook
+                        </p>
+                        <p class="flex items-center py-2 text-secondary text-opacity-80">
+                            <img class="h-6 w-6 ml-1 mr-2" src="./src/images/twitter-colored.svg" alt="twitter-colored">
+                            Visit Roberto's Twitter
+                        </p>
+                        <p class="flex items-center py-2 text-secondary text-opacity-80">
+                            <img class="h-6 w-6 ml-1 mr-2" src="./src/images/instagram-colored.svg"
+                                alt="instagram-colored">
+                            Visit Roberto's Instagram
+                        </p>
+                    </section>
+                </aside>
+            </div>
+
+        </header>
+        <main class="p-5 lg:pt-5 lg:pb-10 lg:px-36 xl:px-48 text-secondary flex flex-col lg:flex-row-reverse ">
+            <aside class="lg:w-4/12">
+
+                <section class="bg-white p-5 my-5 rounded-sm">
+
+                    <h3 class="uppercase text-2xl mt-3 mb-6 text-secondary text-opacity-80 text-light">
+                        Opening Hours
+                    </h3>
+                    <p class="flex items-center py-2 text-secondary text-opacity-80">
+                        Monday: 20:00 - 06:00
+                    </p>
+                    <p class="flex items-center py-2 text-secondary text-opacity-80">
+                        Tuesday: 20:00 - 06:00
+                    </p>
+                    <p class="flex items-center py-2 text-secondary text-opacity-80">
+                        Wednesday: 20:00 - 06:00
+                    </p>
+                    <p class="flex items-center py-2 text-secondary text-opacity-80">
+                        Thursday: 20:00 - 06:00
+                    </p>
+                    <p class="flex items-center py-2 text-secondary text-opacity-80">
+                        Friday: 20:00 - 06:00
+                    </p>
+                    <p class="flex items-center py-2 text-secondary text-opacity-80">
+                        Saturday: 20:00 - 06:00
+                    </p>
+                    <p class="flex items-center py-2 text-secondary text-opacity-80">
+                        Sunday: closed
+                    </p>
+                </section>
+
+                <section class="p-5">
+                    <p class="text-secondary font-semibold hover:underline transition-all">Is this your business</p>
+                    <p class="text-primary font-semibold hover:underline transition-all">Claim it Now</p>
+                    <p class="text-sm font-light text-secondary text-opacity-50 my-2">Make sure your information is upto
+                        date
+                    </p>
+                </section>
+            </aside>
+
+            <main class="lg:w-2/3 lg:px-10 lg:mx-10 lg:bg-white">
+                <h5 class="border-t lg:border-t-0 border-b py-6 px-1 font-light">
+                    1 review
+                </h5>
+
+                <article class="py-6 text-secondary">
+                    <section class="flex">
+                        <div class="px-2 text-center">
+                            <img src="./src/images/user.png" class="h-15 w-15 opacity-75" alt="user">
+                            <p>Ben Affleck</p>
+                        </div>
+                        <div class="px-2">
+                            <p>"Totally Brilliant"</p>
+                            <div class="py-1">
+                                <span class="fa fa-star text-primary"></span>
+                                <span class="fa fa-star text-primary"></span>
+                                <span class="fa fa-star text-primary"></span>
+                                <span class="fa fa-star text-primary"></span>
+                                <span class="fa fa-star text-secondary"></span>
+                            </div>
+                            <p class="text-secondary text-opacity-50 py-1">On 18, November, 2015</p>
+                            <p class="text-secondary text-opacity-75">Along with office buildings and residential
+                                apartments, Paddington
+                                Central is also home to a
+                                gym, a number of quick lunch stops cafes as well as several canal side bars and
+                                restaurants.
+                                Enjoy a lunchtime run along Regent’s Canal, an almost traffic-free jog through the heart
+                                and
+                                soul of London.</p>
+                        </div>
+                    </section>
+                    <section class="my-6">
+                        <h5 class=" border-b py-6 px-1 font-light">
+                            Rate and write a review
+                        </h5>
+                        <form action="" class="flex flex-col">
+                            <label for="review" class="mb-1 mt-3 font-medium">
+                                Your review:
+                            </label>
+                            <textarea name="review" id="" rows="10"
+                                class="w-full p-2.5 rounded-sm border placeholder:text-sm  my-3"
+                                placeholder="Tell about your experience and leave a tip for others"></textarea>
+
+                            <p class="mb-1 mt-3 font-medium">Your overall rating of this listing</p>
+                            <div class="py-2 ">
+                                <span onclick="ratingUpdate(0)" class="fa fa-star give-rating text-primary"></span>
+                                <span onclick="ratingUpdate(1)" class="fa fa-star give-rating text-primary"></span>
+                                <span onclick="ratingUpdate(2)" class="fa fa-star give-rating text-primary"></span>
+                                <span onclick="ratingUpdate(3)" class="fa fa-star give-rating text-primary"></span>
+                                <span onclick="ratingUpdate(4)" class="fa fa-star give-rating text-secondary"></span>
+                                <span id="reviewRatingSummarized" class="mx-5 border px-3 py-1 rounded-md">Very
+                                    Good</span>
+                            </div>
+                            <label class="mb-1 mt-3 font-medium" for="title">Title of your review</label>
+                            <input class="w-full p-2.5 rounded-sm border placeholder:text-sm" type="text" name="title"
+                                placeholder="Summarize your opinion">
+                            <label class="mb-1 mt-3 font-medium" for="Name">Name *</label>
+                            <input class="w-full p-2.5 rounded-sm border placeholder:text-sm" type="text" name="name"
+                                placeholder="Your Name">
+                            <label class="mb-1 mt-3 font-medium" for="email">Email *</label>
+                            <input class="w-full p-2.5 rounded-sm border placeholder:text-sm" type="text" name="email"
+                                placeholder="your@email.com">
+                            <button
+                                class="w-56 my-6  bg-primary hover:bg-secondary text-white transition-all p-3 lg:px-5 rounded-md">
+                                Submit Your Review </button>
+                        </form>
+                    </section>
+
+                </article>
+                <footer class="flex flex-col lg:flex-row lg:justify-between">
+                    <button
+                        class="bg-white border text-center flex justify-between items-center rounded-sm sm:py-2 py-1 px-2 w-full sm:w-auto my-3">
+                        <img src="./src/images/down-arrow.png" alt="down-arrow" class="opacity-50 rotate-90 h-3 w-3">
+                        <span
+                            class="w-full text-center text-secondary  text-opacity-50 text-sm hover:text-primary hover:text-opacity-100 transition-all px-1">
+                            SCP Furniture
+                        </span>
+
+                    </button>
+                    <button
+                        class="bg-white border text-center flex justify-between items-center rounded-sm sm:py-2 py-1 px-2 w-full sm:w-auto my-3">
+                        <span
+                            class="w-full text-center text-secondary  text-opacity-50 text-sm hover:text-primary hover:text-opacity-100 transition-all px-1">
+                            Jago Food
+                        </span>
+                        <img src="./src/images/down-arrow.png" alt="down-arrow" class="opacity-50 -rotate-90 h-3 w-3">
+                    </button>
+                </footer>
+            </main>
+        </main>
+    </main>
+
+    <!-- Footer Section of Page -->
+    <footer class="bg-secondary-darker">
+        <section class="flex justify-center p-6">
+            <img src="./src/images/facebook.svg" alt="facebook"
+                class="p-1 border-2 border-white rounded-full mx-1 hover:opacity-50 transition-all cursor-pointer">
+            <img src="./src/images/youtube.svg" alt="youtube"
+                class="p-1 border-2 border-white rounded-full mx-1 hover:opacity-50 transition-all cursor-pointer">
+            <img src="./src/images/twitter.svg" alt="twitter"
+                class="p-1 border-2 border-white rounded-full mx-1 hover:opacity-50 transition-all cursor-pointer">
+            <img src="./src/images/pinterest.svg" alt="pinterest"
+                class="p-1 border-2 border-white rounded-full mx-1 hover:opacity-50 transition-all cursor-pointer">
+            <img src="./src/images/vkontake.svg" alt="vkontatke"
+                class="p-1 border-2 border-white rounded-full mx-1 hover:opacity-50 transition-all cursor-pointer">
+            <img src="./src/images/instagram.svg" alt="instagram"
+                class="p-1 border-2 border-white rounded-full mx-1 hover:opacity-50 transition-all cursor-pointer">
+        </section>
+        <section
+            class="bg-secondary-darker border-t border-t-secondary-darkest px-6 py-3 sm:px-0 sm:pt-6 sm:pb-9 lg:px-6 flex sm:flex-row flex-col sm:justify-evenly sm:items-center text-white text-opacity-75 text-sm lg:text-base">
+            <ul class="my-3 sm:my-0">
+                <li
+                    class="uppercase font-semibold text-white text-opacity-100 my-2 text-sm tracking-wide lg:text-base lg:tracking-wider">
+                    Categories
+                </li>
+                <li
+                    class="-my-1.5 transition-all cursor-pointer hover:underline hover:text-white hover:text-opacity-100">
+                    Lorem</li>
+                <li
+                    class="-my-1.5 transition-all cursor-pointer hover:underline hover:text-white hover:text-opacity-100">
+                    Dolor</li>
+                <li
+                    class="-my-1.5 transition-all cursor-pointer hover:underline hover:text-white hover:text-opacity-100">
+                    Sit</li>
+                <li
+                    class="-my-1.5 transition-all cursor-pointer hover:underline hover:text-white hover:text-opacity-100">
+                    Amet</li>
+            </ul>
+            <ul class="my-3 sm:my-0">
+                <li
+                    class="uppercase font-semibold text-white text-opacity-100 my-2 text-sm tracking-wide lg:text-base lg:tracking-wider">
+                    information</li>
+                <li
+                    class="-my-1.5 transition-all cursor-pointer hover:underline hover:text-white hover:text-opacity-100">
+                    Lorem</li>
+                <li
+                    class="-my-1.5 transition-all cursor-pointer hover:underline hover:text-white hover:text-opacity-100">
+                    Dolor</li>
+                <li
+                    class="-my-1.5 transition-all cursor-pointer hover:underline hover:text-white hover:text-opacity-100">
+                    Sit</li>
+                <li
+                    class="-my-1.5 transition-all cursor-pointer hover:underline hover:text-white hover:text-opacity-100">
+                    Amet</li>
+            </ul>
+            <ul class="my-3 sm:my-0">
+                <li
+                    class="uppercase font-semibold text-white text-opacity-100 my-2 text-sm tracking-wide lg:text-base lg:tracking-wider">
+                    Near You
+                </li>
+                <li
+                    class="-my-1.5 transition-all cursor-pointer hover:underline hover:text-white hover:text-opacity-100">
+                    Lorem</li>
+                <li
+                    class="-my-1.5 transition-all cursor-pointer hover:underline hover:text-white hover:text-opacity-100">
+                    Dolor</li>
+                <li
+                    class="-my-1.5 transition-all cursor-pointer hover:underline hover:text-white hover:text-opacity-100">
+                    Sit</li>
+                <li
+                    class="-my-1.5 transition-all cursor-pointer hover:underline hover:text-white hover:text-opacity-100">
+                    Amet</li>
+            </ul>
+        </section>
+        <section class="text-center bg-secondary-darkest text-white text-opacity-60 text-sm font-thin p-10 ">
+            <p>Copyright © 2019 Company Inc. • Address • Tel: 42-898-4363 • Contact</p>
+        </section>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false&callback=loadMap"></script>
+    <script src="./src/js/index.js"></script>
+
+
+
+</body>
+
+</html>
