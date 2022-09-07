@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./dist/output.css">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>Category</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
 </head>
 
 <body class="relative h-full" onload="initialise()">
@@ -863,8 +865,39 @@
 
             <!-- Map Section -->
             <section id="categoryMapContent" class=" relative hidden lg:block w-full">
-                <div id="multipointsMap" class="h-full w-full fixed top-0 z-0" style="border:0;">
+                <div id="map" class="h-full w-full fixed top-0 z-0" style="border:0;">
                 </div>
+                
+                <script>
+
+	var planes = [
+		["7C6B07",-40.99497,174.50808],
+		["7C6B38",-41.30269,173.63696],
+		["7C6CA1",-41.49413,173.5421],
+		["7C6CA2",-40.98585,174.50659],
+		["C81D9D",-40.93163,173.81726],
+		["C82009",-41.5183,174.78081],
+		["C82081",-41.42079,173.5783],
+		["C820AB",-42.08414,173.96632],
+		["C820B6",-41.51285,173.53274]
+		];
+
+        var map = L.map('map').setView([-41.3058, 174.82082], 8);
+        mapLink = 
+            '<a href="http://openstreetmap.org">OpenStreetMap</a>';
+        L.tileLayer(
+            'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; ' + mapLink + ' Contributors',
+            maxZoom: 18,
+            }).addTo(map);
+
+		for (var i = 0; i < planes.length; i++) {
+			marker = new L.marker([planes[i][1],planes[i][2]])
+				.bindPopup(planes[i][0])
+				.addTo(map);
+		}
+               
+    </script>
 
                 <button
                     class="lg:hidden absolute top-0 right-0 z-20 m-3 bg-white p-2 rounded-md border-gray-200 shadow-md">
@@ -955,8 +988,7 @@
         </footer>
     </section>
 
-    <script type="text/javascript"
-        src="http://maps.googleapis.com/maps/api/js?sensor=false&callback=initialise"></script>
+    
     <script src="./src/js/index.js"></script>
 </body>
 
