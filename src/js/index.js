@@ -155,11 +155,11 @@ function ratingUpdate(ratingIndex) {
 
     for (let i = 0; i <= givenRating.length - 1; i++) {
         if (i <= ratingIndex) {
-            givenRating[i].classList.add("text-primary");
-            givenRating[i].classList.remove("text-secondary");
+            givenRating[i].classList.add("yellow-star");
+            givenRating[i].classList.remove("dark-star");
         } else {
-            givenRating[i].classList.remove("text-primary");
-            givenRating[i].classList.add("text-secondary");
+            givenRating[i].classList.remove("yellow-star");
+            givenRating[i].classList.add("dark-star");
         }
     }
 

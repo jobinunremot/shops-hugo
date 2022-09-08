@@ -150,3 +150,26 @@
 .nxt-btn {
   right: 0;
 }
+.yellow-star svg path{
+  fill:#FFBD12
+}
+.dark-star svg path{
+  fill:#000
+}
+.icon-bg{
+  background-color: #FF4D55 !important;
+  padding:10px 30px !important;
+  text-align: center !important;
+  position: fixed !important;
+  bottom:0;
+  right:0;
+  left:50%px;
+  border-top-left-radius: 40px;
+}
+.img-color{
+  color:#fff !important;
+  background: #fff !important;
+  text-align: center !important;
+}
+.map-align{margin-left: 30px !important}
+.content-align{margin-left: 40px !important;}
