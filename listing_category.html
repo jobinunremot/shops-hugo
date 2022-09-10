@@ -880,45 +880,45 @@
             </section>
 
             <!-- Map Section -->
-            <section id="categoryMapContent" class=" relative hidden lg:block w-full">
+            <section id="categoryMapContent" class=" relative w-full">
                 <div id="map" class="h-full w-full fixed top-0 z-0" style="border:0;">
+
+
+                    <script>
+
+                        var planes = [
+                            ["7C6B07", -40.99497, 174.50808],
+                            ["7C6B38", -41.30269, 173.63696],
+                            ["7C6CA1", -41.49413, 173.5421],
+                            ["7C6CA2", -40.98585, 174.50659],
+                            ["C81D9D", -40.93163, 173.81726],
+                            ["C82009", -41.5183, 174.78081],
+                            ["C82081", -41.42079, 173.5783],
+                            ["C820AB", -42.08414, 173.96632],
+                            ["C820B6", -41.51285, 173.53274]
+                        ];
+
+                        var map = L.map('map').setView([-41.3058, 174.82082], 8);
+                        mapLink =
+                            '<a href="http://openstreetmap.org">OpenStreetMap</a>';
+                        L.tileLayer(
+                            'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                            attribution: '&copy; ' + mapLink + ' Contributors',
+                            maxZoom: 18,
+                        }).addTo(map);
+
+                        for (var i = 0; i < planes.length; i++) {
+                            marker = new L.marker([planes[i][1], planes[i][2]])
+                                .bindPopup(planes[i][0])
+                                .addTo(map);
+                        }
+
+                    </script>
                 </div>
-
-                <script>
-
-                    var planes = [
-                        ["7C6B07", -40.99497, 174.50808],
-                        ["7C6B38", -41.30269, 173.63696],
-                        ["7C6CA1", -41.49413, 173.5421],
-                        ["7C6CA2", -40.98585, 174.50659],
-                        ["C81D9D", -40.93163, 173.81726],
-                        ["C82009", -41.5183, 174.78081],
-                        ["C82081", -41.42079, 173.5783],
-                        ["C820AB", -42.08414, 173.96632],
-                        ["C820B6", -41.51285, 173.53274]
-                    ];
-
-                    var map = L.map('map').setView([-41.3058, 174.82082], 8);
-                    mapLink =
-                        '<a href="http://openstreetmap.org">OpenStreetMap</a>';
-                    L.tileLayer(
-                        'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                        attribution: '&copy; ' + mapLink + ' Contributors',
-                        maxZoom: 18,
-                    }).addTo(map);
-
-                    for (var i = 0; i < planes.length; i++) {
-                        marker = new L.marker([planes[i][1], planes[i][2]])
-                            .bindPopup(planes[i][0])
-                            .addTo(map);
-                    }
-
-                </script>
-
                 <button class="lg:hidden icon-bg " onclick="hideMap()">
                     <svg class="content-align" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 512.2 512.2"
-                        style="enable-background:new 0 0 512.2 512.2;" xml:space="preserve">
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px"
+                        viewBox="0 0 512.2 512.2" style="enable-background:new 0 0 512.2 512.2;" xml:space="preserve">
                         <g>
                             <path d="M495.1,38.4H85.5c-9.4,0-17.1,7.6-17.1,17.1v17.1H51.3c-9.4,0-17.1,7.6-17.1,17.1v17.1H17.1c-9.4,0-17.1,7.6-17.1,17.1
 				v332.8c0,9.4,7.6,17.1,17.1,17.1h409.6c9.4,0,17.1-7.6,17.1-17.1v-17.1h17.1c9.4,0,17.1-7.6,17.1-17.1v-17.1h17.1
@@ -926,7 +926,7 @@
 				L168,194.2c-3.2-2.9-8.1-2.9-11.3,0L17.3,318.1V132.3c0-4.7,3.8-8.5,8.5-8.5h392.5c4.7,0,8.5,3.8,8.5,8.5V314.4z M452.5,422.4
 				H444V123.7c0-9.4-7.6-17.1-17.1-17.1H51.4v-8.5c0-4.7,3.8-8.5,8.5-8.5h392.5c4.7,0,8.5,3.8,8.5,8.5l0.1,315.8
 				C461,418.6,457.2,422.4,452.5,422.4z M486.6,388.2h-8.5V89.6c0-9.4-7.6-17.1-17.1-17.1H85.5V64c0-4.7,3.8-8.5,8.5-8.5h392.5
-				c4.7,0,8.5,3.8,8.5,8.5v315.7h0.1C495.1,384.4,491.3,388.2,486.6,388.2z" fill="#fff"/>
+				c4.7,0,8.5,3.8,8.5,8.5v315.7h0.1C495.1,384.4,491.3,388.2,486.6,388.2z" fill="#fff" />
                         </g>
                     </svg>
                     <span class="text-white font-semibold pt-1">Show Content</span>
